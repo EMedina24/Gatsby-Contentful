@@ -1,0 +1,6800 @@
+/* line 3, sass/credera-styles.scss */
+.darkModeToggle[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+/* line 9, sass/credera-styles.scss */
+.darkModeToggleLabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+/* line 20, sass/credera-styles.scss */
+.darkModeToggleLabel:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white !important;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+/* line 32, sass/credera-styles.scss */
+.darkModeToggle:checked + label {
+  background: #d22d35 !important;
+}
+
+/* line 36, sass/credera-styles.scss */
+.darkModeToggle:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+/* line 41, sass/credera-styles.scss */
+.darkModeToggleLabel:active:after {
+  width: 45px;
+}
+
+/* line 45, sass/credera-styles.scss */
+.toggle-container {
+  margin: auto;
+}
+
+/* line 49, sass/credera-styles.scss */
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/* line 57, sass/credera-styles.scss */
+html {
+  overflow-x: hidden;
+  --bg: #ffffff;
+  --bg-panel: #ffffff;
+  --color-headings:black !important ;
+  --color-text: black !important;
+}
+
+/* line 66, sass/credera-styles.scss */
+html[data-theme='dark'] {
+  --bg: #333333;
+  --bg-panel: #434343;
+  --color-headings: white !important ;
+  --color-text: white !important;
+}
+
+/* line 74, sass/credera-styles.scss */
+body {
+  background-color: var(--bg);
+}
+
+/* line 78, sass/credera-styles.scss */
+h1 {
+  color: var(--color-headings);
+}
+
+/* line 83, sass/credera-styles.scss */
+h3 {
+  color: var(--color-headings);
+}
+
+/* line 87, sass/credera-styles.scss */
+p {
+  color: var(--color-text);
+}
+
+/* line 91, sass/credera-styles.scss */
+span {
+  color: var(--color-text);
+}
+
+/* line 94, sass/credera-styles.scss */
+span.title {
+  color: var(--color-text);
+}
+
+/* line 98, sass/credera-styles.scss */
+.credera-section .desktop-nav .nav-bar {
+  background-color: var(--bg);
+}
+
+/* line 102, sass/credera-styles.scss */
+.credera-section .video-hero .info-container .info-content .hero-title {
+  color: var(--color-headings);
+}
+
+/* line 107, sass/credera-styles.scss */
+.credera-snippet {
+  color: var(--color-headings);
+}
+
+/* line 111, sass/credera-styles.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item p {
+  color: var(--color-text) !important;
+}
+
+/* line 115, sass/credera-styles.scss */
+a, a:visited, a span {
+  color: var(--color-text) !important;
+}
+
+/* line 2, sass/_snippets.scss */
+.fancybox-bg {
+  background-color: rgba(43, 46, 56, 0.9) !important;
+}
+
+/* line 8, sass/_snippets.scss */
+.credera-snippet a {
+  color: #d22d35;
+  transition: color 300ms;
+}
+
+/* line 12, sass/_snippets.scss */
+.credera-snippet a:hover {
+  color: #932025;
+}
+
+/* line 2, sass/snippets/_button.scss */
+.credera-snippet.primary-button {
+  background-color: #d22d35;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 20px 24px;
+  transition: background-color 300ms ease;
+}
+
+/* line 14, sass/snippets/_button.scss */
+.credera-snippet.primary-button * {
+  color: #ffffff;
+}
+
+/* line 18, sass/snippets/_button.scss */
+.credera-snippet.primary-button .button-content {
+  display: flex;
+}
+
+/* line 21, sass/snippets/_button.scss */
+.credera-snippet.primary-button .button-content svg {
+  align-self: center;
+  height: 20px;
+  margin-left: 24px;
+  width: 20px;
+  transition: transform 300ms ease;
+}
+
+/* line 30, sass/snippets/_button.scss */
+.credera-snippet.primary-button:hover {
+  background-color: #bd2930;
+}
+
+/* line 33, sass/snippets/_button.scss */
+.credera-snippet.primary-button:hover .button-content svg {
+  transform: translateX(2px);
+}
+
+@media (max-width: 568px) {
+  /* line 2, sass/snippets/_button.scss */
+  .credera-snippet.primary-button {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+  /* line 44, sass/snippets/_button.scss */
+  .credera-snippet.primary-button .button-content {
+    justify-content: space-between;
+  }
+  /* line 47, sass/snippets/_button.scss */
+  .credera-snippet.primary-button .button-content span {
+    flex: 1;
+    margin-left: 32px;
+  }
+}
+
+/* line 56, sass/snippets/_button.scss */
+.credera-snippet.secondary-button {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+}
+
+/* line 60, sass/snippets/_button.scss */
+.credera-snippet.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 63, sass/snippets/_button.scss */
+.credera-snippet.secondary-button:hover .button-content svg.play-icon {
+  transform: translateX(0);
+}
+
+/* line 2, sass/snippets/_section-label.scss */
+.credera-snippet.label-text {
+  margin-bottom: 48px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #002a3a;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/snippets/_section-label.scss */
+  .credera-snippet.label-text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+/* line 2, sass/snippets/_section-title.scss */
+.credera-snippet.section-title {
+  margin-bottom: 24px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
+  color: #2e2e2e;
+  text-align: left;
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/snippets/_section-title.scss */
+  .credera-snippet.section-title {
+    margin-bottom: 16px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* line 2, sass/snippets/_section-copy.scss */
+.credera-snippet.copy-text {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #707070;
+  text-align: left;
+}
+
+/* line 10, sass/snippets/_section-copy.scss */
+.credera-snippet.copy-text strong {
+  font-weight: 500;
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/snippets/_section-copy.scss */
+  .credera-snippet.copy-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* line 2, sass/snippets/_product-price.scss */
+.credera-snippet.product-price {
+  font-family: "Gothic A1", sans-serif;
+}
+
+/* line 4, sass/snippets/_product-price.scss */
+.credera-snippet.product-price .product-price-heading {
+  color: #707070;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* line 11, sass/snippets/_product-price.scss */
+.credera-snippet.product-price .price-text-group {
+  font-size: 20px;
+  list-style: 30px;
+  font-weight: bold;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #707070;
+  margin-top: 5px;
+}
+
+/* line 22, sass/snippets/_product-price.scss */
+.credera-snippet.product-price .price-text-group p {
+  margin: 0;
+}
+
+/* line 25, sass/snippets/_product-price.scss */
+.credera-snippet.product-price .price-text-group .price {
+  color: #2e2e2e;
+  margin-right: 5px;
+}
+
+/* line 29, sass/snippets/_product-price.scss */
+.credera-snippet.product-price .price-text-group .or-text {
+  margin-right: 5px;
+}
+
+/* line 32, sass/snippets/_product-price.scss */
+.credera-snippet.product-price .price-text-group .affirm-as-low-as {
+  text-transform: lowercase;
+}
+
+@media (max-width: 850px) {
+  /* line 11, sass/snippets/_product-price.scss */
+  .credera-snippet.product-price .price-text-group {
+    font-size: 16px;
+  }
+}
+
+/* line 2, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price {
+  font-family: "Gothic A1", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* line 8, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .lhs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  box-sizing: content-box;
+  padding-right: 40px;
+  border-right: 1px solid #8e8e8e;
+  max-width: 240px;
+}
+
+@media (max-width: 568px) {
+  /* line 8, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .lhs {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+/* line 23, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .rhs {
+  padding-left: 40px;
+}
+
+@media (max-width: 568px) {
+  /* line 23, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .rhs {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+/* line 32, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .price-text-group {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #2e2e2e;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media (max-width: 1080px) {
+  /* line 32, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .price-text-group {
+    font-size: 32px;
+    line-height: auto;
+  }
+}
+
+/* line 45, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .price-text-group .per-month-text-logo-group {
+  position: relative;
+}
+
+/* line 47, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .price-text-group .per-month-text-logo-group img {
+  position: relative;
+  margin-bottom: -2px;
+  margin-left: -3px;
+  max-width: 63px;
+}
+
+/* line 54, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .price-text-group .per-month-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2e2e2e;
+}
+
+/* line 62, sass/snippets/_financing-callout.scss */
+.credera-snippet.financing-price .bottom-text {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #707070;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 568px) {
+  /* line 2, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price {
+    justify-content: space-between;
+  }
+  /* line 75, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .lhs {
+    padding-right: 23px;
+  }
+  /* line 78, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .rhs {
+    padding-left: 30px;
+  }
+  /* line 81, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .price-text-group {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  /* line 85, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .price-text-group .per-month-text-logo-group img {
+    max-width: 48px;
+    margin-bottom: -1px;
+  }
+  /* line 91, sass/snippets/_financing-callout.scss */
+  .credera-snippet.financing-price .bottom-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+/* line 2, sass/snippets/_estimated-shipping.scss */
+.credera-snippet.estimated-shipping {
+  padding: 4px;
+  background-color: #f8f8fa;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-self: space-between;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
+}
+
+@media (max-width: 568px) {
+  /* line 2, sass/snippets/_estimated-shipping.scss */
+  .credera-snippet.estimated-shipping {
+    width: 100%;
+    min-height: 60px;
+  }
+}
+
+/* line 17, sass/snippets/_estimated-shipping.scss */
+.credera-snippet.estimated-shipping .shipping-date {
+  background-color: #eaeaea;
+  color: #2e2e2e;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+/* line 26, sass/snippets/_estimated-shipping.scss */
+.credera-snippet.estimated-shipping .shipping-date .date {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+}
+
+/* line 33, sass/snippets/_estimated-shipping.scss */
+.credera-snippet.estimated-shipping .shipping-date .date.ships-now {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+/* line 39, sass/snippets/_estimated-shipping.scss */
+.credera-snippet.estimated-shipping .shipping-date .est-shipping-text {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 9px;
+}
+
+/* line 47, sass/snippets/_estimated-shipping.scss */
+.credera-snippet.estimated-shipping .shipping-message {
+  color: #2e2e2e;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  max-width: 230px;
+  padding: 0 16px 0 12px;
+  text-align: left;
+}
+
+@media (max-width: 568px) {
+  /* line 47, sass/snippets/_estimated-shipping.scss */
+  .credera-snippet.estimated-shipping .shipping-message {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+/* line 2, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card {
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+}
+
+@media (max-width: 1080px) {
+  /* line 2, sass/snippets/_membership-card.scss */
+  .credera-snippet.membership-card {
+    min-width: unset;
+  }
+}
+
+/* line 11, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 0;
+}
+
+/* line 17, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .row:after {
+  display: none;
+}
+
+/* line 22, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .membership-card-title {
+  margin-bottom: 16px;
+}
+
+/* line 25, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .membership-card-title h3 {
+  margin: 0;
+  min-height: 24px;
+}
+
+/* line 31, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card hr {
+  margin: 16px 0px;
+  border-color: #d9d9d9;
+  border-bottom: 0;
+}
+
+/* line 37, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .label-text {
+  margin-bottom: 16px;
+}
+
+/* line 41, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .tag {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-self: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/* line 55, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .tag.most-flexible {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+/* line 59, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .tag.most-popular {
+  background-color: #d22d35;
+  color: #ffffff;
+}
+
+/* line 63, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .tag.best-value {
+  background-color: #f8f8fa;
+  border: 1px solid #d9d9d9;
+  color: #d22d35;
+}
+
+/* line 70, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .savings {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  min-height: 14px;
+  color: #707070;
+  margin-bottom: 25px;
+}
+
+/* line 80, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .row-label {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+  text-align: left;
+}
+
+/* line 89, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .row-value {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+  text-align: right;
+}
+
+/* line 97, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .row-value.shipping {
+  text-transform: uppercase;
+}
+
+/* line 99, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .row-value.shipping.free {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+/* line 106, sass/snippets/_membership-card.scss */
+.credera-snippet.membership-card .total {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 40px;
+}
+
+/* line 2, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal {
+  background-color: #f8f8fa;
+  padding: 80px 120px;
+}
+
+/* line 6, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .fancybox-close-small {
+  display: block !important;
+}
+
+/* line 10, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-controls {
+  display: none;
+  background-color: #f8f8fa;
+  padding: 0 16px;
+}
+
+/* line 15, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-controls button {
+  flex: 1;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2e2e2e;
+  text-transform: uppercase;
+  background-color: transparent;
+  line-height: 53px;
+  height: 53px;
+}
+
+/* line 26, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-controls button .control-text {
+  position: relative;
+}
+
+/* line 30, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-controls button.active .control-text:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 40px;
+  border-radius: 2px;
+  background-color: #d22d35;
+}
+
+@media (max-width: 850px) {
+  /* line 10, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-controls {
+    display: flex;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 10, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-controls {
+    padding: 0 8px;
+  }
+}
+
+/* line 51, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .modal-title .copy-text {
+  text-align: center;
+}
+
+/* line 55, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-options {
+  display: flex;
+  margin: 40px 0;
+  list-style: none;
+  padding: 0;
+}
+
+/* line 61, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-options .membership-card-wrapper {
+  min-width: 280px;
+  flex: 1;
+}
+
+/* line 66, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .membership-options .membership-card-wrapper:not(:last-of-type) {
+  margin-right: 16px;
+}
+
+@media (max-width: 1080px) {
+  /* line 71, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options .membership-card-wrapper {
+    min-width: 255px;
+  }
+  /* line 75, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options .membership-card-wrapper:not(:last-of-type) {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 55, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  /* line 84, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options .membership-card-wrapper {
+    min-width: unset;
+    width: 100%;
+    padding: 0 24px;
+    margin-right: 0 !important;
+  }
+  /* line 90, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options .membership-card-wrapper:not(.active) {
+    display: none;
+  }
+  /* line 95, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options .membership-card {
+    border: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 101, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .membership-options .membership-card-wrapper {
+    padding: 0 8px;
+  }
+}
+
+/* line 108, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .existing-membership .label-text {
+  text-transform: unset;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* line 114, sass/snippets/_membership-modal.scss */
+.credera-snippet.membership-modal .existing-membership .copy-text {
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  /* line 2, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal {
+    padding: 64px 48px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal {
+    padding: 64px 0;
+    background-color: #ffffff;
+  }
+  /* line 127, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .modal-title,
+  .credera-snippet.membership-modal .existing-membership {
+    padding: 0 24px;
+  }
+  /* line 131, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal .modal-title .copy-text,
+  .credera-snippet.membership-modal .modal-title .label-text,
+  .credera-snippet.membership-modal .existing-membership .copy-text,
+  .credera-snippet.membership-modal .existing-membership .label-text {
+    text-align: left;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 2, sass/snippets/_membership-modal.scss */
+  .credera-snippet.membership-modal {
+    padding: 48px 0;
+  }
+}
+
+/* line 2, sass/snippets/_social-icons.scss */
+.credera-snippet.social-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 8, sass/snippets/_social-icons.scss */
+.credera-snippet.social-icons li {
+  margin: 0 24px 0 0;
+  align-self: center;
+}
+
+/* line 13, sass/snippets/_social-icons.scss */
+.credera-snippet.social-icons a {
+  transition: opacity 300ms;
+}
+
+/* line 16, sass/snippets/_social-icons.scss */
+.credera-snippet.social-icons a:hover {
+  opacity: 0.5;
+}
+
+/* line 21, sass/snippets/_social-icons.scss */
+.credera-snippet.social-icons svg {
+  height: 24px;
+}
+
+/* line 23, sass/snippets/_social-icons.scss */
+.credera-snippet.social-icons svg.youtube-icon {
+  height: 32px;
+}
+
+/* line 2, sass/snippets/_sale-callout.scss */
+.credera-snippet.sale-callout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* line 9, sass/snippets/_sale-callout.scss */
+.credera-snippet.sale-callout .compare-at-price {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 34px;
+  color: #707070;
+  margin: 0;
+  margin-right: 16px;
+  position: relative;
+}
+
+/* line 19, sass/snippets/_sale-callout.scss */
+.credera-snippet.sale-callout .compare-at-price::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 45%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: inherit;
+}
+
+/* line 30, sass/snippets/_sale-callout.scss */
+.credera-snippet.sale-callout .savings {
+  background-color: #002a3a;
+  border-radius: 5px;
+  padding: 5px 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  /* line 44, sass/snippets/_sale-callout.scss */
+  .credera-snippet.sale-callout .compare-at-price,
+  .credera-snippet.sale-callout .savings {
+    font-size: 16px;
+  }
+}
+
+/* line 1, sass/snippets/_nav-region.scss */
+.credera-snippet.nav-region {
+  font-family: "Rubik", sans-serif;
+}
+
+/* line 4, sass/snippets/_nav-region.scss */
+.credera-snippet.nav-region .region-label {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* line 9, sass/snippets/_nav-region.scss */
+.credera-snippet.nav-region .region-label:hover {
+  cursor: pointer;
+}
+
+/* line 13, sass/snippets/_nav-region.scss */
+.credera-snippet.nav-region .region-label p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2e2e2e;
+}
+
+/* line 21, sass/snippets/_nav-region.scss */
+.credera-snippet.nav-region .region-label img {
+  margin-right: 8px;
+}
+
+/* line 29, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents .fancybox-close-small {
+  display: block !important;
+}
+
+/* line 33, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents h3 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #2e2e2e;
+}
+
+/* line 40, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #707070;
+}
+
+/* line 47, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents .modal-list {
+  border-top: 1px solid #d9d9d9;
+  margin-top: 32px;
+}
+
+/* line 51, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents .modal-list .modal-row {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 24px 16px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* line 58, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents .modal-list .modal-row p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/* line 64, sass/snippets/_nav-region.scss */
+.credera-snippet.region-modal-contents .modal-list .modal-row img {
+  margin-right: 8px;
+}
+
+/* line 1, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav {
+  z-index: 99;
+  display: none;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Rubik", sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 118px;
+}
+
+/* line 15, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav:hover {
+  display: flex;
+}
+
+/* line 19, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .pages-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* line 22, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .pages-container .section-header {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  color: #002a3a;
+}
+
+/* line 34, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .pages-container .page-link {
+  font-family: "Rubik", sans-serif;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+  margin-bottom: 16px;
+}
+
+/* line 44, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .pages-container .page-link:hover {
+  color: #707070;
+}
+
+/* line 50, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .divider {
+  height: 140px;
+  width: 1px;
+  margin: 0 64px;
+  background-color: #eaeaea;
+}
+
+/* line 57, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .product-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0 -24px;
+}
+
+/* line 63, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .product-container .nav-product-item {
+  padding: 0 24px;
+  margin-bottom: 16px;
+}
+
+/* line 67, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .product-container .nav-product-item .product-link {
+  text-decoration: none;
+}
+
+/* line 71, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .product-container .nav-product-item .product-link:hover .product-title {
+  color: #707070;
+}
+
+/* line 76, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .product-container .nav-product-item .product-link .product-image {
+  height: 140px;
+  width: 140px;
+  padding: 10px;
+  margin-bottom: 16px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-color: rgba(234, 234, 234, 0.3);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 89, sass/snippets/_sub-nav-desktop.scss */
+.credera-snippet.sub-nav .product-container .nav-product-item .product-link .product-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+}
+
+/* line 1, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+  font-family: "Rubik", sans-serif;
+  display: none;
+  overflow-y: auto;
+}
+
+/* line 14, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile.active {
+  display: block;
+}
+
+/* line 18, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .content-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: calc(100% - 48px);
+  min-height: 100%;
+  margin: 0 24px;
+  padding: 24px 0;
+}
+
+/* line 28, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .sub-nav-header {
+  width: 100%;
+}
+
+/* line 31, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .sub-nav-header .header-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #707070;
+}
+
+/* line 37, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .sub-nav-header .header-btn:hover {
+  cursor: pointer;
+}
+
+/* line 41, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .sub-nav-header .header-btn svg {
+  margin-right: 10px;
+  transform: rotate(180deg);
+  stroke: #707070;
+}
+
+/* line 50, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .pages-container .section-header {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0;
+  padding-bottom: 16px;
+  margin: 0;
+  margin-top: 40px;
+  color: #002a3a;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* line 64, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .pages-container .page-link {
+  font-family: "Rubik", sans-serif;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+  padding: 16px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* line 77, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .product-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 40px -24px;
+}
+
+/* line 83, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .product-container .nav-product-item {
+  padding: 0 23px;
+  margin-bottom: 16px;
+}
+
+/* line 87, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .product-container .nav-product-item .product-link {
+  text-decoration: none;
+}
+
+/* line 90, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .product-container .nav-product-item .product-link .product-image {
+  height: 140px;
+  width: 140px;
+  padding: 10px;
+  margin-bottom: 16px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-color: rgba(234, 234, 234, 0.3);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 103, sass/snippets/_sub-nav-mobile.scss */
+.credera-snippet.sub-nav-mobile .product-container .nav-product-item .product-link .product-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2e2e2e;
+}
+
+/* line 2, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav {
+  position: fixed;
+  top: 118px;
+  left: 0;
+  right: 0;
+  background-color: #f8f8fa;
+  border-bottom: 1px solid #eaeaea;
+  z-index: 10;
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav {
+    top: 112px;
+  }
+}
+
+/* line 15, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .row {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* line 22, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .row:after {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  /* line 15, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .row {
+    justify-content: left;
+  }
+}
+
+/* line 31, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .title-container,
+.credera-snippet.product-subnav .nav-item-container,
+.credera-snippet.product-subnav .price-cta-container {
+  display: flex;
+}
+
+/* line 37, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .title-container {
+  text-align: left;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 24px 24px 24px 40px;
+  margin-right: auto;
+  justify-content: flex-start;
+  width: 25%;
+}
+
+/* line 45, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .title-container.desktop-only {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1080px) {
+  /* line 45, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .title-container.desktop-only {
+    display: none;
+  }
+}
+
+/* line 54, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .title-container.mobile-only {
+  display: none;
+  padding: 0;
+  width: unset;
+  margin-bottom: 4px;
+}
+
+/* line 60, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .title-container.mobile-only h1.title {
+  color: #707070;
+}
+
+@media (max-width: 1080px) {
+  /* line 54, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .title-container.mobile-only {
+    display: block;
+  }
+}
+
+/* line 69, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .title-container h1.title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #002a3a;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1280px) {
+  /* line 69, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .title-container h1.title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1280px) {
+  /* line 37, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .title-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+  }
+}
+
+/* line 90, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .nav-item-container {
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 24px 0;
+  flex: 1;
+  position: relative;
+}
+
+@media (max-width: 1280px) {
+  /* line 90, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .nav-item-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 90, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .nav-item-container {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 90, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .nav-item-container {
+    display: none;
+  }
+}
+
+/* line 109, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .nav-item-container .nav-items-content {
+  overflow-x: auto;
+  height: 100%;
+}
+
+@media (max-width: 1080px) {
+  /* line 109, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .nav-item-container .nav-items-content {
+    padding: 0 12px;
+  }
+}
+
+/* line 118, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .nav-item-container .nav-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1280px) {
+  /* line 118, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .nav-item-container .nav-list {
+    justify-content: left;
+  }
+}
+
+/* line 130, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .nav-item-container .nav-list .nav-item {
+  margin: 0 12px;
+  white-space: nowrap;
+}
+
+/* line 134, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .nav-item-container .nav-list .nav-item a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #707070;
+  text-transform: uppercase;
+  transition: color 300ms;
+}
+
+@media (max-width: 1280px) {
+  /* line 134, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .nav-item-container .nav-list .nav-item a {
+    font-size: 12px;
+  }
+}
+
+/* line 148, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .nav-item-container .nav-list .nav-item a:hover {
+  color: #2e2e2e;
+}
+
+/* line 156, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .price-cta-container {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  width: 25%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+@media (max-width: 850px) {
+  /* line 156, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-cta-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* line 170, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .cta-container {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+/* line 173, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .cta-container a {
+  height: 100%;
+  display: flex;
+}
+
+/* line 176, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .cta-container a .button-content {
+  align-self: center;
+}
+
+/* line 178, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .cta-container a .button-content span {
+  margin: 0;
+}
+
+@media (max-width: 374px) {
+  /* line 185, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .cta-container a svg {
+    display: none;
+  }
+}
+
+/* line 191, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .price-container {
+  background-color: #ffffff;
+  border-left: 1px solid #eaeaea;
+  padding: 0 24px;
+  display: flex;
+  margin-left: auto;
+}
+
+@media (max-width: 850px) {
+  /* line 191, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container {
+    border: 0;
+    background-color: transparent;
+    margin: 0;
+    padding: 16px 0 16px 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 191, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container {
+    padding: 8px 0 8px 16px;
+  }
+}
+
+/* line 209, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .price-container .price-content {
+  align-self: center;
+}
+
+@media (max-width: 1080px) {
+  /* line 213, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container .product-price {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+/* line 221, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .price-container p.price,
+.credera-snippet.product-subnav .price-container p.financing {
+  margin: 0;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: bold;
+  line-height: normal;
+}
+
+/* line 229, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .price-container p.price {
+  font-size: 16px;
+  color: #2e2e2e;
+}
+
+@media (max-width: 1080px) {
+  /* line 229, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container p.price {
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 4px;
+  }
+}
+
+/* line 239, sass/snippets/_product-sub-navigation.scss */
+.credera-snippet.product-subnav .price-container p.financing {
+  font-size: 12px;
+  color: #707070;
+}
+
+@media (max-width: 1080px) {
+  /* line 239, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container p.financing {
+    color: #2e2e2e;
+    line-height: 16px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 239, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container p.financing {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 239, sass/snippets/_product-sub-navigation.scss */
+  .credera-snippet.product-subnav .price-container p.financing {
+    font-size: 10px;
+  }
+}
+
+/* line 1, sass/snippets/_app-store-links.scss */
+.credera-snippet.app-store-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 6, sass/snippets/_app-store-links.scss */
+.credera-snippet.app-store-links li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+/* line 11, sass/snippets/_app-store-links.scss */
+.credera-snippet.app-store-links li:not(:last-of-type) {
+  margin-right: 16px;
+}
+
+/* line 15, sass/snippets/_app-store-links.scss */
+.credera-snippet.app-store-links li a {
+  height: 40px;
+}
+
+/* line 18, sass/snippets/_app-store-links.scss */
+.credera-snippet.app-store-links li a svg {
+  height: 40px;
+}
+
+/* line 8, sass/_sections.scss */
+.credera-section .container {
+  margin: auto;
+  max-width: 1440px;
+  padding: 120px 40px;
+  width: 100%;
+}
+
+/* line 14, sass/_sections.scss */
+.credera-section .container:after {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  /* line 8, sass/_sections.scss */
+  .credera-section .container {
+    width: 100%;
+    padding: 48px 32px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 8, sass/_sections.scss */
+  .credera-section .container {
+    padding: 48px 24px;
+  }
+}
+
+/* line 28, sass/_sections.scss */
+.credera-section .container-narrow {
+  margin: auto;
+  max-width: 1440px;
+  padding: 120px;
+  width: 100%;
+}
+
+/* line 34, sass/_sections.scss */
+.credera-section .container-narrow:after {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  /* line 28, sass/_sections.scss */
+  .credera-section .container-narrow {
+    width: 100%;
+    padding: 48px 32px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 28, sass/_sections.scss */
+  .credera-section .container-narrow {
+    padding: 48px 24px;
+  }
+}
+
+/* line 48, sass/_sections.scss */
+.credera-section .hero-container {
+  max-width: 100%;
+  margin: 40px;
+}
+
+@media (min-width: 1920px) {
+  /* line 48, sass/_sections.scss */
+  .credera-section .hero-container {
+    max-width: 1840px;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 48, sass/_sections.scss */
+  .credera-section .hero-container {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 48, sass/_sections.scss */
+  .credera-section .hero-container {
+    margin-top: 40px;
+  }
+}
+
+/* line 2, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.3s linear;
+  -webkit-animation: fadeIn 0.3s linear none;
+          animation: fadeIn 0.3s linear none;
+}
+
+/* line 12, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .announcement-banner {
+  background-color: #eaeaea;
+  padding: 16px;
+  min-height: 44px;
+  text-align: center;
+  position: relative;
+}
+
+/* line 19, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .announcement-banner .announcement-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #2e2e2e;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  display: none;
+}
+
+/* line 29, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .announcement-banner .announcement-text.visible {
+  display: block;
+}
+
+/* line 34, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .announcement-banner .region-picker {
+  position: absolute;
+  right: 16px;
+  top: 9px;
+}
+
+/* line 41, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar {
+  background-color: #ffffff;
+  padding: 0 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* line 49, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-logo {
+  max-width: 175px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 54, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-logo a {
+  width: 100%;
+}
+
+/* line 57, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-logo img {
+  width: 100%;
+}
+
+/* line 62, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* line 66, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-dropdown .arrow {
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  margin-top: 2px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+}
+
+/* line 77, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .dropdown-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* line 84, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .dropdown-container:hover .nav-dropdown {
+  color: #d22d35;
+}
+
+/* line 87, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .dropdown-container:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* line 92, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .dropdown-container .nav-dropdown-content {
+  display: none;
+  border-top: 1px solid #d22d35;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  z-index: 101;
+  top: 100%;
+  left: -24px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transition: height 0.5s;
+}
+
+/* line 105, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .dropdown-container .nav-dropdown-content a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+  text-decoration: none;
+  display: block;
+  padding: 6px 0;
+}
+
+/* line 114, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .dropdown-container .nav-dropdown-content a:hover {
+  color: #707070;
+}
+
+/* line 121, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-item-container {
+  height: 73px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+/* line 128, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items {
+  margin: 0 -20px;
+  list-style: none;
+}
+
+/* line 132, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item {
+  height: 100%;
+  padding: 0 20px;
+  margin: 0;
+  border-color: #2e2e2e;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* line 141, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item.active, .credera-section .desktop-nav .nav-bar .nav-items .nav-item:hover {
+  border-bottom: 1px solid #d22d35;
+  margin-bottom: -1px;
+}
+
+/* line 146, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item.active p, .credera-section .desktop-nav .nav-bar .nav-items .nav-item:hover p {
+  color: #d22d35;
+  border-color: #d22d35;
+}
+
+/* line 150, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item.active .arrow, .credera-section .desktop-nav .nav-bar .nav-items .nav-item:hover .arrow {
+  border-top-color: #d22d35;
+}
+
+/* line 155, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2e2e2e;
+}
+
+/* line 163, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-items .nav-item .arrow {
+  border-top-color: #2e2e2e;
+}
+
+/* line 169, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories {
+  color: #707070;
+  align-items: center;
+}
+
+/* line 173, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .login-dropdown-btn {
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+  border-color: #707070;
+}
+
+/* line 179, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .login-dropdown-btn .login-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+}
+
+/* line 187, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button {
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #707070;
+  border-radius: 20px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+/* line 195, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button:hover {
+  border-color: #d22d35;
+  color: #d22d35;
+}
+
+/* line 200, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.shopping-cart {
+  stroke: #707070;
+}
+
+/* line 203, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.shopping-cart:hover {
+  border-color: #d22d35;
+  color: #d22d35;
+  stroke: #d22d35;
+}
+
+/* line 208, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.shopping-cart:hover p.cart-count-condensed {
+  background-color: #d22d35;
+}
+
+/* line 214, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.side-menu-button {
+  fill: #707070;
+}
+
+/* line 216, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.side-menu-button rect {
+  fill: #707070;
+}
+
+/* line 220, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.side-menu-button:hover {
+  fill: #d22d35;
+}
+
+/* line 222, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.side-menu-button:hover rect {
+  fill: #d22d35;
+}
+
+/* line 229, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .shopping-cart.cart-full {
+  stroke: #2e2e2e;
+  color: #2e2e2e;
+  border-color: #2e2e2e;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* line 237, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .shopping-cart.cart-full p {
+  margin: 0;
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* line 244, sass/sections/_navigation-bar.scss */
+.credera-section .desktop-nav .nav-bar .nav-accessories .shopping-cart.cart-full p.cart-count-condensed {
+  display: none;
+  font-size: 10px;
+  line-height: 12px;
+  height: 21px;
+  width: 21px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 11px;
+  color: #ffffff;
+  background-color: #2e2e2e;
+}
+
+@media (max-width: 1410px) {
+  /* line 263, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar {
+    padding: 0 24px;
+  }
+  /* line 265, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-logo {
+    max-width: 150px;
+  }
+  /* line 270, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-items .nav-item {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+  /* line 277, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .login-dropdown-btn {
+    margin-right: 8px;
+  }
+  /* line 280, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .nav-button {
+    margin: 0 3px;
+  }
+  /* line 283, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.side-menu-button {
+    border: none;
+  }
+  /* line 286, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.shopping-cart {
+    border: none;
+  }
+  /* line 289, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.shopping-cart p.cart-count-expanded {
+    display: none;
+  }
+  /* line 292, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .nav-button.shopping-cart p.cart-count-condensed {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* line 302, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar {
+    justify-content: flex-start;
+  }
+  /* line 306, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-logo {
+    max-width: 125px;
+  }
+  /* line 310, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-items {
+    justify-content: flex-start;
+  }
+  /* line 313, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-items .nav-item {
+    padding: 0 10px;
+  }
+  /* line 315, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-items .nav-item .arrow {
+    margin-left: 2px;
+  }
+  /* line 321, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories {
+    margin-left: auto;
+  }
+  /* line 324, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .dropdown-container {
+    display: none;
+  }
+  /* line 328, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav .nav-bar .nav-accessories .nav-button {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/sections/_navigation-bar.scss */
+  .credera-section .desktop-nav {
+    display: none;
+  }
+}
+
+/* line 341, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 201;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.3s linear;
+  -webkit-animation: fadeIn 0.3s linear none;
+          animation: fadeIn 0.3s linear none;
+  display: none;
+}
+
+@media (max-width: 850px) {
+  /* line 341, sass/sections/_navigation-bar.scss */
+  .credera-section .mobile-nav {
+    display: block;
+  }
+}
+
+/* line 357, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .announcement-banner {
+  background-color: #eaeaea;
+  padding: 16px;
+  min-height: 44px;
+  text-align: center;
+  position: relative;
+}
+
+/* line 364, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .announcement-banner .announcement-text {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #2e2e2e;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  display: none;
+}
+
+/* line 374, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .announcement-banner .announcement-text.visible {
+  display: block;
+}
+
+/* line 379, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar {
+  height: 68px;
+  background-color: #ffffff;
+  padding: 0 24px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* line 388, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-logo {
+  max-width: 175px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 393, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-logo a {
+  width: 100%;
+}
+
+/* line 396, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-logo img {
+  width: 100%;
+}
+
+/* line 401, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories {
+  color: #707070;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* line 408, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories .nav-button {
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* line 413, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories .nav-button.shopping-cart {
+  stroke: #707070;
+}
+
+/* line 418, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories .shopping-cart.cart-full {
+  stroke: #2e2e2e;
+  color: #2e2e2e;
+  border-color: #2e2e2e;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* line 426, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories .shopping-cart.cart-full p {
+  margin: 0;
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  height: 21px;
+  width: 21px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 11px;
+  color: #ffffff;
+  background-color: #2e2e2e;
+}
+
+/* line 442, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories .side-menu-button {
+  fill: #707070;
+}
+
+/* line 445, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-bar .nav-accessories .side-menu-button rect {
+  fill: #707070;
+}
+
+/* line 452, sass/sections/_navigation-bar.scss */
+.credera-section .mobile-nav .nav-side-bar {
+  top: 112px;
+}
+
+/* line 458, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar {
+  z-index: 201;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 375px;
+  background-color: #ffffff;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  padding-bottom: 50px;
+  overflow-y: auto;
+}
+
+@media (max-width: 568px) {
+  /* line 458, sass/sections/_navigation-bar.scss */
+  .credera-section .nav-side-bar {
+    width: 100%;
+  }
+}
+
+/* line 475, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar.active {
+  transform: translateX(0);
+}
+
+/* line 479, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding: 24px;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+/* line 488, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-header .close-btn:hover {
+  cursor: pointer;
+}
+
+/* line 493, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-container {
+  padding: 24px;
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 498, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-container .side-nav-items {
+  list-style: none;
+  border-top: 1px solid #eaeaea;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 504, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-container .side-nav-items .nav-item {
+  margin: 0;
+  padding: 16px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #2e2e2e;
+  stroke: #2e2e2e;
+}
+
+/* line 515, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-container .side-nav-items .nav-item:hover {
+  cursor: pointer;
+  color: #d22d35;
+  stroke: #d22d35;
+}
+
+/* line 521, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-container .side-nav-items .nav-item .nav-text {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* line 530, sass/sections/_navigation-bar.scss */
+.credera-section .nav-side-bar .side-bar-container .side-nav-items .sidebar-login-item {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  /* line 530, sass/sections/_navigation-bar.scss */
+  .credera-section .nav-side-bar .side-bar-container .side-nav-items .sidebar-login-item {
+    display: block;
+  }
+}
+
+/* line 541, sass/sections/_navigation-bar.scss */
+.credera-section .nav-background-screen {
+  z-index: 200;
+  display: none;
+  opacity: 0;
+  background-color: #2e2e2e;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.25s;
+}
+
+/* line 553, sass/sections/_navigation-bar.scss */
+.credera-section .nav-background-screen.active {
+  display: block;
+  opacity: 0.7;
+}
+
+@media (max-width: 850px) {
+  /* line 560, sass/sections/_navigation-bar.scss */
+  .credera-section #nav-side-bar-desktop {
+    display: none;
+  }
+  /* line 566, sass/sections/_navigation-bar.scss */
+  .credera-section .nav-bar .nav-accessories #close-btn-mobile {
+    height: 40px;
+    padding: 10px;
+  }
+  /* line 575, sass/sections/_navigation-bar.scss */
+  .credera-section .nav-side-bar .side-bar-container .side-nav-items {
+    border-top: none;
+  }
+}
+
+/* line 583, sass/sections/_navigation-bar.scss */
+.credera-section .nav-spacer {
+  position: relative;
+  height: 118px;
+}
+
+@media (max-width: 850px) {
+  /* line 583, sass/sections/_navigation-bar.scss */
+  .credera-section .nav-spacer {
+    height: 112px;
+  }
+}
+
+/* line 3, sass/sections/_cta-section.scss */
+.credera-section .cta-section .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* line 10, sass/sections/_cta-section.scss */
+.credera-section .cta-section .row-reverse {
+  flex-flow: row-reverse nowrap;
+}
+
+/* line 13, sass/sections/_cta-section.scss */
+.credera-section .cta-section .row-reverse .info-container {
+  padding-left: 0;
+  padding-right: 120px;
+}
+
+@media (max-width: 1080px) {
+  /* line 13, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .row-reverse .info-container {
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 13, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .row-reverse .info-container {
+    padding-right: 0;
+  }
+}
+
+/* line 27, sass/sections/_cta-section.scss */
+.credera-section .cta-section .img-container {
+  width: 50%;
+  flex: 1;
+  align-self: center;
+}
+
+/* line 32, sass/sections/_cta-section.scss */
+.credera-section .cta-section .img-container img {
+  width: 100%;
+}
+
+/* line 37, sass/sections/_cta-section.scss */
+.credera-section .cta-section .info-container {
+  max-width: 50%;
+  flex: 1;
+  padding-right: 0;
+  padding-left: 120px;
+  align-self: center;
+}
+
+@media (max-width: 1080px) {
+  /* line 37, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container {
+    padding-left: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 37, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container {
+    padding-left: 0;
+  }
+}
+
+/* line 52, sass/sections/_cta-section.scss */
+.credera-section .cta-section .info-container .cta-copy {
+  margin-bottom: 0;
+}
+
+/* line 56, sass/sections/_cta-section.scss */
+.credera-section .cta-section .info-container .primary-button {
+  margin-top: 64px;
+}
+
+/* line 60, sass/sections/_cta-section.scss */
+.credera-section .cta-section .info-container .cta-price {
+  margin-top: 24px;
+}
+
+/* line 64, sass/sections/_cta-section.scss */
+.credera-section .cta-section .info-container .cta-financing {
+  margin-top: 24px;
+}
+
+@media (max-width: 850px) {
+  /* line 70, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .row,
+  .credera-section .cta-section .row-reverse {
+    display: block;
+  }
+  /* line 75, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .img-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  /* line 80, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  /* line 84, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container .cta-section-label {
+    margin-top: 40px;
+  }
+  /* line 88, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container .primary-button {
+    margin-top: 40px;
+  }
+  /* line 92, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container .cta-price {
+    margin-top: 16px;
+  }
+  /* line 96, sass/sections/_cta-section.scss */
+  .credera-section .cta-section .info-container .cta-financing {
+    margin-top: 40px;
+  }
+}
+
+/* line 103, sass/sections/_cta-section.scss */
+.credera-section .cta-section .splitit-container {
+  margin-top: 3px;
+}
+
+/* line 106, sass/sections/_cta-section.scss */
+.credera-section .cta-section .-splitit--text {
+  font-size: 20px;
+  list-style: 30px;
+  font-weight: bold;
+  align-items: center;
+  color: #707070;
+}
+
+/* line 113, sass/sections/_cta-section.scss */
+.credera-section .cta-section .-splitit--text-price {
+  font-size: 20px;
+  list-style: 30px;
+  font-weight: bold;
+  align-items: center;
+  color: #000;
+}
+
+/* line 3, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* line 10, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .row-reverse {
+  flex-flow: row-reverse nowrap;
+}
+
+/* line 13, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .row-reverse .info-container {
+  padding-left: 0;
+  padding-right: 80px;
+}
+
+@media (max-width: 1080px) {
+  /* line 13, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .row-reverse .info-container {
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 13, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .row-reverse .info-container {
+    padding-right: 0;
+  }
+}
+
+/* line 27, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .img-container {
+  width: 50%;
+  flex: 1;
+  align-self: center;
+}
+
+/* line 32, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .img-container img {
+  width: 100%;
+}
+
+/* line 37, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .info-container {
+  max-width: 50%;
+  flex: 1;
+  padding-right: 0;
+  padding-left: 80px;
+  align-self: center;
+}
+
+@media (max-width: 1080px) {
+  /* line 37, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .info-container {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 37, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .info-container {
+    padding-left: 0;
+  }
+}
+
+/* line 52, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .info-container .copy-text {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* line 58, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .info-container .section-title {
+  margin-bottom: 0;
+}
+
+/* line 62, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .info-container .primary-button {
+  margin-top: 64px;
+}
+
+/* line 66, sass/sections/_category-cta-section.scss */
+.credera-section .category-cta-section .info-container .cta-price {
+  margin-top: 24px;
+}
+
+@media (max-width: 850px) {
+  /* line 76, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .row,
+  .credera-section .category-cta-section .row-reverse {
+    display: block;
+  }
+  /* line 81, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .img-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  /* line 86, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .info-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  /* line 90, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .info-container .cta-section-label {
+    margin-top: 40px;
+  }
+  /* line 94, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .info-container .primary-button {
+    margin-top: 40px;
+  }
+  /* line 98, sass/sections/_category-cta-section.scss */
+  .credera-section .category-cta-section .info-container .cta-price {
+    margin-top: 16px;
+  }
+}
+
+/* line 2, sass/sections/_video-hero.scss */
+.credera-section .video-hero {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* line 11, sass/sections/_video-hero.scss */
+.credera-section .video-hero.full-width {
+  max-width: 100%;
+  margin: 0;
+  margin-top: 71px;
+}
+
+@media (max-width: 850px) {
+  /* line 11, sass/sections/_video-hero.scss */
+  .credera-section .video-hero.full-width {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 11, sass/sections/_video-hero.scss */
+  .credera-section .video-hero.full-width {
+    margin-top: 65px;
+  }
+}
+
+/* line 24, sass/sections/_video-hero.scss */
+.credera-section .video-hero video {
+  z-index: 0;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: -9000px;
+  bottom: -9000px;
+  left: -9000px;
+  right: -9000px;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 39, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container {
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  padding: 80px 120px;
+  width: 100%;
+}
+
+/* line 48, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container .info-content {
+  text-align: left;
+  max-width: 680px;
+}
+
+/* line 52, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container .info-content .label-text {
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* line 57, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container .info-content .hero-title {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  font-size: 64px;
+  line-height: 76px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/* line 65, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container .info-content .copy-text {
+  color: #ffffff;
+  margin-bottom: 64px;
+}
+
+/* line 72, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container.homepage-hero .hero-title {
+  margin-bottom: 24px;
+}
+
+/* line 78, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container.product-hero .hero-title {
+  margin-bottom: 64px;
+}
+
+/* line 84, sass/sections/_video-hero.scss */
+.credera-section .video-hero .info-container.category-hero .hero-title {
+  font-weight: 500;
+}
+
+/* line 90, sass/sections/_video-hero.scss */
+.credera-section .video-hero .category-hero,
+.credera-section .video-hero .homepage-hero {
+  padding: 120px;
+}
+
+@media (max-width: 1080px) {
+  /* line 96, sass/sections/_video-hero.scss */
+  .credera-section .video-hero .info-container {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 102, sass/sections/_video-hero.scss */
+  .credera-section .video-hero .info-container {
+    padding: 40px;
+    padding-top: 120px;
+  }
+  /* line 107, sass/sections/_video-hero.scss */
+  .credera-section .video-hero .info-container .info-content .hero-title {
+    font-size: 40px !important;
+    line-height: 48px !important;
+  }
+  /* line 114, sass/sections/_video-hero.scss */
+  .credera-section .video-hero .info-container.product-hero .hero-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 124, sass/sections/_video-hero.scss */
+  .credera-section .video-hero video {
+    height: 100%;
+    width: unset;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 131, sass/sections/_video-hero.scss */
+  .credera-section .video-hero .info-container {
+    padding: 24px;
+    padding-top: 180px;
+  }
+  /* line 136, sass/sections/_video-hero.scss */
+  .credera-section .video-hero .info-container .info-content .hero-title {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+}
+
+/* line 2, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section {
+  background-color: #002a3a;
+}
+
+/* line 5, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .derisk-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+/* line 11, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .derisk-item {
+  width: calc(33.3% - 64px);
+  text-align: center;
+}
+
+/* line 16, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .copy-text,
+.credera-section .derisk-section .label-text {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* line 22, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .label-text {
+  margin-bottom: 24px;
+}
+
+/* line 26, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .copy-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 31, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .derisk-icon {
+  margin-bottom: 24px;
+  display: block;
+}
+
+/* line 35, sass/sections/_derisk-section.scss */
+.credera-section .derisk-section .derisk-icon svg {
+  height: 40px;
+}
+
+@media (max-width: 1080px) {
+  /* line 41, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .derisk-item {
+    width: calc(33.3% - 32px);
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 47, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .derisk-list {
+    display: block;
+  }
+  /* line 51, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .label-text {
+    margin-bottom: 16px;
+  }
+  /* line 55, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .derisk-icon svg {
+    height: 32px;
+  }
+  /* line 59, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .derisk-item {
+    width: 100%;
+    max-width: 480px;
+    margin: 40px auto 0;
+  }
+  /* line 64, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .derisk-item:first-of-type {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 71, sass/sections/_derisk-section.scss */
+  .credera-section .derisk-section .derisk-icon svg {
+    height: 24px;
+  }
+}
+
+/* line 2, sass/sections/_community-section.scss */
+.credera-section .community-section {
+  overflow: hidden;
+  position: relative;
+  background-color: #002a3a;
+}
+
+/* line 7, sass/sections/_community-section.scss */
+.credera-section .community-section.light-mode {
+  background-color: #ffffff;
+}
+
+/* line 10, sass/sections/_community-section.scss */
+.credera-section .community-section.light-mode:before {
+  background-color: #002a3a;
+}
+
+/* line 15, sass/sections/_community-section.scss */
+.credera-section .community-section.light-mode .social-icons svg .fill {
+  fill: #707070;
+}
+
+/* line 19, sass/sections/_community-section.scss */
+.credera-section .community-section.light-mode .social-icons svg .fill-cut {
+  fill: #ffffff;
+}
+
+/* line 23, sass/sections/_community-section.scss */
+.credera-section .community-section.light-mode .social-icons svg .stroke {
+  stroke: #ffffff;
+}
+
+/* line 30, sass/sections/_community-section.scss */
+.credera-section .community-section:not(.light-mode) .label-text,
+.credera-section .community-section:not(.light-mode) .copy-text,
+.credera-section .community-section:not(.light-mode) .section-title {
+  color: #ffffff;
+}
+
+/* line 37, sass/sections/_community-section.scss */
+.credera-section .community-section .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 42, sass/sections/_community-section.scss */
+.credera-section .community-section:before, .credera-section .community-section:after {
+  content: '';
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+/* line 53, sass/sections/_community-section.scss */
+.credera-section .community-section:before {
+  top: 0;
+}
+
+/* line 57, sass/sections/_community-section.scss */
+.credera-section .community-section:after {
+  bottom: 0;
+  z-index: 0;
+}
+
+/* line 62, sass/sections/_community-section.scss */
+.credera-section .community-section .row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 0;
+}
+
+/* line 69, sass/sections/_community-section.scss */
+.credera-section .community-section .info-wrapper {
+  align-self: center;
+  width: 50%;
+  flex-basis: 50%;
+}
+
+/* line 75, sass/sections/_community-section.scss */
+.credera-section .community-section .info-container {
+  margin-right: 80px;
+  max-width: 480px;
+}
+
+/* line 80, sass/sections/_community-section.scss */
+.credera-section .community-section .social-icons {
+  margin-top: 40px;
+}
+
+/* line 84, sass/sections/_community-section.scss */
+.credera-section .community-section .img-container {
+  align-self: center;
+  display: flex;
+  z-index: 1;
+  align-self: center;
+  flex-basis: 50%;
+  width: 50%;
+}
+
+/* line 92, sass/sections/_community-section.scss */
+.credera-section .community-section .img-container img:not(:last-of-type) {
+  margin-bottom: 11px;
+}
+
+/* line 96, sass/sections/_community-section.scss */
+.credera-section .community-section .img-container .img-row-1,
+.credera-section .community-section .img-container .img-row-2 {
+  margin-right: 16px;
+}
+
+/* line 101, sass/sections/_community-section.scss */
+.credera-section .community-section .img-container .img-row-2 {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+/* line 106, sass/sections/_community-section.scss */
+.credera-section .community-section .img-container .img-row-3 {
+  margin-top: auto;
+  margin-bottom: 180px;
+}
+
+@media (max-width: 1280px) {
+  /* line 113, sass/sections/_community-section.scss */
+  .credera-section .community-section img {
+    width: 240px;
+    height: 240px;
+  }
+  /* line 118, sass/sections/_community-section.scss */
+  .credera-section .community-section:before, .credera-section .community-section:after {
+    height: 64px;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 125, sass/sections/_community-section.scss */
+  .credera-section .community-section:before, .credera-section .community-section:after {
+    height: 48px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 132, sass/sections/_community-section.scss */
+  .credera-section .community-section:after {
+    display: none;
+  }
+  /* line 136, sass/sections/_community-section.scss */
+  .credera-section .community-section:before {
+    height: 48px;
+  }
+  /* line 140, sass/sections/_community-section.scss */
+  .credera-section .community-section .row {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  /* line 145, sass/sections/_community-section.scss */
+  .credera-section .community-section .info-wrapper {
+    width: 100%;
+    flex-basis: auto;
+  }
+  /* line 148, sass/sections/_community-section.scss */
+  .credera-section .community-section .info-wrapper .info-container {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 48px;
+  }
+  /* line 155, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container {
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: 80px;
+  }
+  /* line 160, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container img {
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 168, sass/sections/_community-section.scss */
+  .credera-section .community-section:before {
+    height: 32px;
+  }
+  /* line 172, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container {
+    margin-bottom: 40px;
+  }
+  /* line 174, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container img:not(:last-of-type) {
+    margin-bottom: 3px;
+  }
+  /* line 178, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container .img-row-1,
+  .credera-section .community-section .img-container .img-row-2 {
+    margin-right: 8px;
+  }
+  /* line 183, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container .img-row-2 {
+    margin-bottom: 32px;
+  }
+  /* line 187, sass/sections/_community-section.scss */
+  .credera-section .community-section .img-container .img-row-3 {
+    margin-bottom: 80px;
+  }
+}
+
+/* line 3, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 8, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .video-player {
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  /* line 8, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .video-player {
+    margin-bottom: 40px;
+  }
+}
+
+/* line 17, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+/* line 22, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .image-row .img-container {
+  flex-basis: calc(33.3% - 16px);
+}
+
+/* line 25, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .image-row .img-container img {
+  width: 100%;
+}
+
+/* line 31, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-copy {
+  max-width: 66%;
+  padding-right: 120px;
+}
+
+/* line 35, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-copy .copy-text {
+  margin-bottom: 64px;
+}
+
+/* line 40, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-bullets {
+  padding-top: 72px;
+}
+
+/* line 43, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-bullets.mobile-only {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  /* line 40, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+  /* line 51, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets.mobile-only {
+    display: block;
+  }
+  /* line 55, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets.desktop-only {
+    display: none;
+  }
+}
+
+/* line 60, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-bullets ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 66, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-bullets li {
+  font-family: "Rubik", sans-serif;
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+}
+
+/* line 74, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-bullets li:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
+/* line 78, sass/sections/_membership-section.scss */
+.credera-section .memberships-section .memberships-bullets li svg {
+  width: 24px;
+  margin-right: 16px;
+  align-self: center;
+}
+
+@media (max-width: 850px) {
+  /* line 87, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-info {
+    display: block;
+  }
+  /* line 91, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-copy {
+    max-width: none;
+    padding: 0;
+  }
+  /* line 95, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-copy .copy-text {
+    margin-bottom: 24px;
+  }
+  /* line 100, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+  /* line 104, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets.mobile-only {
+    display: block;
+  }
+  /* line 108, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets.desktop-only {
+    display: none;
+  }
+  /* line 112, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets li {
+    font-size: 16px;
+  }
+  /* line 115, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .memberships-bullets li:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+  /* line 121, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .image-row {
+    margin-bottom: 40px;
+  }
+  /* line 124, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .image-row .img-container {
+    flex-basis: calc(33.3% - 5px);
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 131, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .image-row {
+    display: block;
+  }
+  /* line 134, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .image-row .img-container {
+    height: 160px;
+    overflow: hidden;
+  }
+  /* line 138, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .image-row .img-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* line 142, sass/sections/_membership-section.scss */
+  .credera-section .memberships-section .image-row .img-container:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+}
+
+/* line 2, sass/sections/_endorsements.scss */
+.credera-section .endorsements {
+  background-color: #002a3a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 7, sass/sections/_endorsements.scss */
+.credera-section .endorsements .endorsement-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 120px 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 850px) {
+  /* line 7, sass/sections/_endorsements.scss */
+  .credera-section .endorsements .endorsement-list {
+    padding: 48px 80px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 7, sass/sections/_endorsements.scss */
+  .credera-section .endorsements .endorsement-list {
+    padding: 48px 24px;
+  }
+}
+
+/* line 24, sass/sections/_endorsements.scss */
+.credera-section .endorsements .endorsement-item {
+  text-align: center;
+  align-self: center;
+}
+
+/* line 28, sass/sections/_endorsements.scss */
+.credera-section .endorsements .endorsement-item .copy-text,
+.credera-section .endorsements .endorsement-item .label-text {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* line 34, sass/sections/_endorsements.scss */
+.credera-section .endorsements .endorsement-item .label-text,
+.credera-section .endorsements .endorsement-item .endorsement-logo {
+  margin-bottom: 24px;
+}
+
+/* line 39, sass/sections/_endorsements.scss */
+.credera-section .endorsements .endorsement-item .endorsement-logo {
+  height: 48px;
+  position: relative;
+  display: block;
+}
+
+/* line 44, sass/sections/_endorsements.scss */
+.credera-section .endorsements .endorsement-item .endorsement-logo img {
+  height: 100%;
+  margin: auto;
+}
+
+/* line 51, sass/sections/_endorsements.scss */
+.credera-section .endorsements .slick-track {
+  display: flex;
+}
+
+/* line 55, sass/sections/_endorsements.scss */
+.credera-section .endorsements .slick-slide {
+  margin: 0 64px;
+}
+
+/* line 59, sass/sections/_endorsements.scss */
+.credera-section .endorsements .slick-list {
+  margin: 0 -64px;
+  padding: 0 !important;
+}
+
+@media (max-width: 850px) {
+  /* line 65, sass/sections/_endorsements.scss */
+  .credera-section .endorsements .slick-slide {
+    margin: 0 40px;
+  }
+  /* line 69, sass/sections/_endorsements.scss */
+  .credera-section .endorsements .slick-list {
+    margin: 0 -40px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 75, sass/sections/_endorsements.scss */
+  .credera-section .endorsements .slick-slide {
+    margin: 0 24px;
+  }
+  /* line 79, sass/sections/_endorsements.scss */
+  .credera-section .endorsements .slick-list {
+    margin: 0 -24px;
+  }
+}
+
+/* line 2, sass/sections/_newsletter.scss */
+.credera-section .newsletter-section {
+  background-color: #bfe5f1;
+  text-align: center;
+}
+
+/* line 6, sass/sections/_newsletter.scss */
+.credera-section .newsletter-section .klaviyo-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+/* line 11, sass/sections/_newsletter.scss */
+.credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt {
+  flex-direction: row;
+}
+
+/* line 13, sass/sections/_newsletter.scss */
+.credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt .kgtZbf.kgtZbf:first-of-type {
+  width: 480px;
+}
+
+/* line 15, sass/sections/_newsletter.scss */
+.credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt .kgtZbf.kgtZbf:first-of-type input {
+  height: 60px !important;
+}
+
+/* line 19, sass/sections/_newsletter.scss */
+.credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt button {
+  background-color: #d22d35;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 24px;
+}
+
+@media (max-width: 568px) {
+  /* line 6, sass/sections/_newsletter.scss */
+  .credera-section .newsletter-section .klaviyo-container {
+    width: 100%;
+  }
+  /* line 34, sass/sections/_newsletter.scss */
+  .credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt {
+    flex-direction: column;
+  }
+  /* line 36, sass/sections/_newsletter.scss */
+  .credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt .kgtZbf.kgtZbf:first-of-type {
+    width: 100%;
+  }
+  /* line 40, sass/sections/_newsletter.scss */
+  .credera-section .newsletter-section .klaviyo-container div[class^='klaviyo-form-'] .Ndwyt.Ndwyt button {
+    width: 100%;
+  }
+}
+
+/* line 2, sass/sections/_featured-products.scss */
+.credera-section .featured-products {
+  position: relative;
+  overflow: hidden;
+  padding-top: 24px;
+  padding-bottom: 62px;
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/sections/_featured-products.scss */
+  .credera-section .featured-products {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+}
+
+/* line 13, sass/sections/_featured-products.scss */
+.credera-section .featured-products .featured-products-slider {
+  overflow-x: scroll;
+  padding: 0 40px;
+  box-sizing: content-box;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+/* line 17, sass/sections/_featured-products.scss */
+.credera-section .featured-products .featured-products-slider::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+@media (max-width: 850px) {
+  /* line 13, sass/sections/_featured-products.scss */
+  .credera-section .featured-products .featured-products-slider {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 13, sass/sections/_featured-products.scss */
+  .credera-section .featured-products .featured-products-slider {
+    padding: 0 24px;
+  }
+}
+
+/* line 32, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+/* line 42, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item {
+  text-align: center;
+  min-width: 184px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  /* line 42, sass/sections/_featured-products.scss */
+  .credera-section .featured-products .products-item {
+    min-width: 25vw;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 42, sass/sections/_featured-products.scss */
+  .credera-section .featured-products .products-item {
+    min-width: 50vw;
+  }
+}
+
+/* line 55, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+/* line 59, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item a {
+  display: block;
+  padding: 16px;
+  border-radius: 8px;
+  transition: background-color 300ms;
+}
+
+/* line 65, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item a:hover {
+  background-color: #f8f8fa;
+}
+
+/* line 68, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item a:hover .copy-text {
+  color: #002a3a;
+}
+
+/* line 74, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item .copy-text {
+  color: #2e2e2e;
+  font-weight: 500;
+  transition: color 300ms;
+}
+
+/* line 80, sass/sections/_featured-products.scss */
+.credera-section .featured-products .products-item .product-image {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0 auto 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: opacity 300ms;
+}
+
+@media (max-width: 568px) {
+  /* line 80, sass/sections/_featured-products.scss */
+  .credera-section .featured-products .products-item .product-image {
+    width: 100%;
+  }
+}
+
+/* line 3, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .carousel-control {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #ffffff;
+  width: 60px;
+  height: 60px;
+  transition: background-color 300ms;
+  position: absolute;
+  top: calc(50% - 30px);
+  z-index: 1;
+}
+
+@media (max-width: 568px) {
+  /* line 3, sass/sections/_carousel.scss */
+  .credera-section .credera-carousel .carousel-control {
+    display: none !important;
+  }
+}
+
+/* line 17, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .carousel-control.previous {
+  left: 0;
+}
+
+/* line 21, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .carousel-control.next {
+  right: 0;
+}
+
+/* line 25, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .carousel-control:hover {
+  background-color: #ffffff;
+}
+
+/* line 27, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .carousel-control:hover svg .fill {
+  fill: #2e2e2e;
+}
+
+/* line 32, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .carousel-control svg {
+  width: 24px;
+  transition: fill 300ms;
+}
+
+/* line 38, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .slick-dots {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 850px) {
+  /* line 38, sass/sections/_carousel.scss */
+  .credera-section .credera-carousel .slick-dots {
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 38, sass/sections/_carousel.scss */
+  .credera-section .credera-carousel .slick-dots {
+    bottom: 16px;
+  }
+}
+
+/* line 57, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .slick-dots li {
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  transition: background-color 300ms, width 300ms ease;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* line 67, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .slick-dots li button {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 8px;
+}
+
+/* line 74, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .slick-dots li:only-child {
+  display: none;
+}
+
+/* line 78, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .slick-dots li:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+/* line 82, sass/sections/_carousel.scss */
+.credera-section .credera-carousel .slick-dots li.slick-active {
+  background-color: #ffffff;
+  width: 40px;
+}
+
+@media (max-width: 850px) {
+  /* line 91, sass/sections/_carousel.scss */
+  .credera-section .carousel-section.container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 97, sass/sections/_carousel.scss */
+  .credera-section .carousel-section .carousel-control {
+    display: none !important;
+  }
+}
+
+/* line 103, sass/sections/_carousel.scss */
+.credera-section .carousel-section .slick-track {
+  display: flex;
+}
+
+/* line 107, sass/sections/_carousel.scss */
+.credera-section .carousel-section .slick-slide {
+  height: inherit;
+}
+
+/* line 111, sass/sections/_carousel.scss */
+.credera-section .carousel-section .slick-list {
+  padding: 0 !important;
+}
+
+/* line 114, sass/sections/_carousel.scss */
+.credera-section .carousel-section .carousel-inner {
+  width: 100%;
+  display: flex;
+  background-color: #2e2e2e;
+}
+
+/* line 120, sass/sections/_carousel.scss */
+.credera-section .carousel-section .carousel-item {
+  position: relative;
+  padding: 120px 160px;
+  background-color: #2e2e2e;
+  transition: opacity 200ms;
+  overflow: hidden;
+  display: flex;
+}
+
+/* line 128, sass/sections/_carousel.scss */
+.credera-section .carousel-section .carousel-item:not(.slick-active) {
+  opacity: 0;
+}
+
+/* line 131, sass/sections/_carousel.scss */
+.credera-section .carousel-section .carousel-item:not(.slick-active) .item-content {
+  transform: translateY(8px);
+  opacity: 0;
+}
+
+@media (max-width: 850px) {
+  /* line 120, sass/sections/_carousel.scss */
+  .credera-section .carousel-section .carousel-item {
+    padding: 120px 64px 80px;
+  }
+  /* line 140, sass/sections/_carousel.scss */
+  .credera-section .carousel-section .carousel-item:not(.slick-active) {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 120, sass/sections/_carousel.scss */
+  .credera-section .carousel-section .carousel-item {
+    padding: 120px 24px 80px;
+  }
+}
+
+/* line 150, sass/sections/_carousel.scss */
+.credera-section .carousel-section .item-content {
+  align-self: center;
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 600ms 100ms, transform 800ms 100ms ease;
+}
+
+/* line 159, sass/sections/_carousel.scss */
+.credera-section .carousel-section .item-content .copy-text,
+.credera-section .carousel-section .item-content .label-text,
+.credera-section .carousel-section .item-content .section-title {
+  color: #ffffff;
+}
+
+/* line 166, sass/sections/_carousel.scss */
+.credera-section .carousel-section .item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #2e2e2e;
+}
+
+/* line 177, sass/sections/_carousel.scss */
+.credera-section .carousel-section .item-image img {
+  opacity: 0.25;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 98, sass/_sections.scss */
+.credera-section .feature-list-section {
+  background-color: #f8f8fa;
+}
+
+/* line 101, sass/_sections.scss */
+.credera-section .feature-list-section .container {
+  display: flex;
+}
+
+@media (max-width: 1080px) {
+  /* line 101, sass/_sections.scss */
+  .credera-section .feature-list-section .container {
+    display: block;
+  }
+}
+
+/* line 109, sass/_sections.scss */
+.credera-section .feature-list-section .text-area,
+.credera-section .feature-list-section .feature-list {
+  flex: 1;
+  align-self: center;
+  position: relative;
+}
+
+/* line 116, sass/_sections.scss */
+.credera-section .feature-list-section .text-area {
+  padding-right: 120px;
+  max-width: 50%;
+}
+
+@media (max-width: 1080px) {
+  /* line 116, sass/_sections.scss */
+  .credera-section .feature-list-section .text-area {
+    max-width: unset;
+    padding: 0;
+  }
+}
+
+/* line 126, sass/_sections.scss */
+.credera-section .feature-list-section .feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 1080px) {
+  /* line 126, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-list {
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 126, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-list {
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 126, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-list {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+/* line 150, sass/_sections.scss */
+.credera-section .feature-list-section .feature-item {
+  width: calc(33% - 10px);
+  height: 200px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+  display: inline-block;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* line 161, sass/_sections.scss */
+.credera-section .feature-list-section .feature-item.feature-item-2, .credera-section .feature-list-section .feature-item.feature-item-5, .credera-section .feature-list-section .feature-item.feature-item-8 {
+  transform: translateY(40px);
+}
+
+/* line 167, sass/_sections.scss */
+.credera-section .feature-list-section .feature-item.feature-item-3, .credera-section .feature-list-section .feature-item.feature-item-6, .credera-section .feature-list-section .feature-item.feature-item-9 {
+  transform: translateY(-40px);
+}
+
+@media (max-width: 1280px) {
+  /* line 150, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item {
+    height: 160px;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 150, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item {
+    width: calc(20% - 13px);
+    margin-right: 16px;
+  }
+  /* line 181, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item.feature-item-2, .credera-section .feature-list-section .feature-item.feature-item-5, .credera-section .feature-list-section .feature-item.feature-item-8, .credera-section .feature-list-section .feature-item.feature-item-3, .credera-section .feature-list-section .feature-item.feature-item-6, .credera-section .feature-list-section .feature-item.feature-item-9 {
+    transform: translateY(0);
+  }
+  /* line 190, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item:nth-of-type(5) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 150, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: calc(33% - 10px);
+    height: 180px;
+  }
+  /* line 201, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item.feature-item-2, .credera-section .feature-list-section .feature-item.feature-item-5, .credera-section .feature-list-section .feature-item.feature-item-8 {
+    transform: translateY(24px);
+  }
+  /* line 207, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item.feature-item-1, .credera-section .feature-list-section .feature-item.feature-item-4, .credera-section .feature-list-section .feature-item.feature-item-7 {
+    transform: translateY(-24px);
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 150, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item {
+    height: 160px;
+    width: calc(50% - 8px);
+  }
+  /* line 218, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item.feature-item-2, .credera-section .feature-list-section .feature-item.feature-item-4, .credera-section .feature-list-section .feature-item.feature-item-6, .credera-section .feature-list-section .feature-item.feature-item-8 {
+    transform: translateY(64px);
+  }
+  /* line 225, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item.feature-item-1, .credera-section .feature-list-section .feature-item.feature-item-3, .credera-section .feature-list-section .feature-item.feature-item-5, .credera-section .feature-list-section .feature-item.feature-item-7, .credera-section .feature-list-section .feature-item.feature-item-9 {
+    transform: translateY(0);
+  }
+}
+
+/* line 234, sass/_sections.scss */
+.credera-section .feature-list-section .feature-item .feature-label {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2e2e2e;
+  background-color: #ffffff;
+  padding: 10px 16px;
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  z-index: 1;
+  display: block;
+}
+
+@media (max-width: 568px) {
+  /* line 234, sass/_sections.scss */
+  .credera-section .feature-list-section .feature-item .feature-label {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 4px 8px;
+  }
+}
+
+/* line 259, sass/_sections.scss */
+.credera-section.specs-group {
+  background-color: #f8f8fa;
+}
+
+/* line 261, sass/_sections.scss */
+.credera-section.specs-group .container div:not(:first-of-type) {
+  margin-top: 80px;
+}
+
+@media (max-width: 568px) {
+  /* line 261, sass/_sections.scss */
+  .credera-section.specs-group .container div:not(:first-of-type) {
+    margin-top: 0;
+  }
+}
+
+/* line 270, sass/_sections.scss */
+.credera-section .product-specifications {
+  margin: auto;
+  max-width: 960px;
+}
+
+/* line 274, sass/_sections.scss */
+.credera-section .product-specifications.mobile-only {
+  display: none;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+@media (max-width: 568px) {
+  /* line 280, sass/_sections.scss */
+  .credera-section .product-specifications.desktop-only {
+    display: none;
+  }
+  /* line 284, sass/_sections.scss */
+  .credera-section .product-specifications.mobile-only {
+    display: block;
+  }
+}
+
+/* line 289, sass/_sections.scss */
+.credera-section .product-specifications .spec-list-title {
+  border-bottom: 2px solid #d9d9d9;
+  color: #2e2e2e;
+  display: block;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  padding-bottom: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* line 303, sass/_sections.scss */
+.credera-section .product-specifications .spec-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 309, sass/_sections.scss */
+.credera-section .product-specifications .spec-item {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  margin-top: 48px;
+}
+
+@media (max-width: 568px) {
+  /* line 309, sass/_sections.scss */
+  .credera-section .product-specifications .spec-item {
+    font-size: 14px;
+    margin-top: 32px;
+  }
+}
+
+/* line 320, sass/_sections.scss */
+.credera-section .product-specifications .spec-item.hidden {
+  display: none;
+}
+
+/* line 324, sass/_sections.scss */
+.credera-section .product-specifications .spec-item .spec-label {
+  color: #707070;
+  flex-basis: 160px;
+  font-weight: 500;
+  margin-right: 48px;
+}
+
+@media (max-width: 568px) {
+  /* line 324, sass/_sections.scss */
+  .credera-section .product-specifications .spec-item .spec-label {
+    flex-basis: 100px;
+    margin-right: 16px;
+  }
+}
+
+/* line 336, sass/_sections.scss */
+.credera-section .product-specifications .spec-item .spec-description {
+  color: #2e2e2e;
+  flex: 1;
+}
+
+/* line 342, sass/_sections.scss */
+.credera-section .product-specifications .spec-expand {
+  background-color: transparent;
+  color: #d22d35;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 48px;
+  padding: 0;
+  text-transform: unset;
+  transition: color 300ms;
+}
+
+/* line 354, sass/_sections.scss */
+.credera-section .product-specifications .spec-expand:hover {
+  color: #932025;
+}
+
+/* line 359, sass/_sections.scss */
+.credera-section .product-specifications .spec-mobile-expand {
+  background-color: transparent;
+  padding: 0 8px;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* line 367, sass/_sections.scss */
+.credera-section .product-specifications .spec-mobile-expand .spec-list-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  align-self: center;
+  border: 0;
+  padding: 0;
+}
+
+/* line 376, sass/_sections.scss */
+.credera-section .product-specifications .spec-mobile-expand svg {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* line 383, sass/_sections.scss */
+.credera-section .product-specifications .spec-mobile-expand.expanded svg {
+  transform: rotate(180deg);
+}
+
+/* line 389, sass/_sections.scss */
+.credera-section .product-specifications .spec-list-mobile {
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 8px;
+}
+
+/* line 395, sass/_sections.scss */
+.credera-section .product-specifications .spec-list-mobile.expanded {
+  height: auto;
+  opacity: 1;
+  padding-bottom: 40px;
+}
+
+/* line 405, sass/_sections.scss */
+.credera-section .product-description .row {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
+@media (max-width: 850px) {
+  /* line 412, sass/_sections.scss */
+  .credera-section .product-description .row.product-wrapper {
+    display: block;
+  }
+}
+
+/* line 418, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container {
+  width: 50%;
+  flex: 1;
+}
+
+/* line 422, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .highlight-image {
+  width: 100%;
+  height: 580px;
+}
+
+/* line 426, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .highlight-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 433, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .thumbnail-row {
+  flex-wrap: nowrap;
+  margin-top: 16px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+/* line 439, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail {
+  width: 25%;
+  height: 156px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-bottom: 4px;
+  border-bottom: 4px solid transparent;
+}
+
+/* line 446, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail.active {
+  border-bottom: 4px solid #d22d35;
+}
+
+/* line 450, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 454, sass/_sections.scss */
+.credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail img:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  /* line 433, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container .thumbnail-row {
+    margin-top: 8px;
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  /* line 464, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+/* line 472, sass/_sections.scss */
+.credera-section .product-description .information-container {
+  padding-right: 0;
+  padding-left: 120px;
+  align-self: center;
+  flex: 1;
+}
+
+/* line 478, sass/_sections.scss */
+.credera-section .product-description .information-container .product-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+/* line 487, sass/_sections.scss */
+.credera-section .product-description .information-container .copy-text {
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+
+/* line 492, sass/_sections.scss */
+.credera-section .product-description .information-container .product-price {
+  margin-bottom: 24px;
+}
+
+/* line 496, sass/_sections.scss */
+.credera-section .product-description .information-container .primary-button {
+  margin-right: 8px;
+}
+
+@media (max-width: 568px) {
+  /* line 496, sass/_sections.scss */
+  .credera-section .product-description .information-container .primary-button {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 506, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container {
+    width: 40%;
+  }
+  /* line 508, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container .highlight-image {
+    height: 350px;
+  }
+  /* line 511, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail {
+    height: 9vw;
+  }
+  /* line 516, sass/_sections.scss */
+  .credera-section .product-description .information-container {
+    padding-left: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 522, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container {
+    width: 100%;
+  }
+  /* line 524, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container .highlight-image {
+    height: 88vw;
+  }
+  /* line 527, sass/_sections.scss */
+  .credera-section .product-description .image-gallery-container .thumbnail-row .thumbnail {
+    height: 22vw;
+  }
+  /* line 532, sass/_sections.scss */
+  .credera-section .product-description .information-container {
+    margin-top: 48px;
+    text-align: center;
+    padding-left: 0;
+  }
+  /* line 537, sass/_sections.scss */
+  .credera-section .product-description .information-container .product-title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+  /* line 542, sass/_sections.scss */
+  .credera-section .product-description .information-container .copy-text {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  /* line 546, sass/_sections.scss */
+  .credera-section .product-description .information-container .primary-button {
+    margin-bottom: 8px;
+  }
+}
+
+/* line 554, sass/_sections.scss */
+.credera-section .stride-folding-info {
+  background-color: #002a3a;
+}
+
+/* line 557, sass/_sections.scss */
+.credera-section .stride-folding-info .row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* line 563, sass/_sections.scss */
+.credera-section .stride-folding-info .information-container {
+  padding-left: 0;
+  padding-right: 120px;
+  flex: 1;
+}
+
+/* line 568, sass/_sections.scss */
+.credera-section .stride-folding-info .information-container .label-text,
+.credera-section .stride-folding-info .information-container .section-title,
+.credera-section .stride-folding-info .information-container .copy-text {
+  color: #ffffff;
+}
+
+/* line 575, sass/_sections.scss */
+.credera-section .stride-folding-info .image-container {
+  width: 50%;
+  height: 620px;
+}
+
+/* line 579, sass/_sections.scss */
+.credera-section .stride-folding-info .image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1080px) {
+  /* line 586, sass/_sections.scss */
+  .credera-section .stride-folding-info .image-container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 592, sass/_sections.scss */
+  .credera-section .stride-folding-info .row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  /* line 597, sass/_sections.scss */
+  .credera-section .stride-folding-info .information-container {
+    padding-right: 0;
+    margin-top: 40px;
+  }
+  /* line 601, sass/_sections.scss */
+  .credera-section .stride-folding-info .image-container {
+    width: 100%;
+    height: 88vw;
+  }
+}
+
+/* line 609, sass/_sections.scss */
+.credera-section.custom-product-template-section {
+  padding: 30px;
+  margin: 0;
+}
+
+/* line 612, sass/_sections.scss */
+.credera-section.custom-product-template-section .product_header_nav {
+  border-bottom: 1px solid #d9d9d9;
+  top: 118px;
+}
+
+/* line 616, sass/_sections.scss */
+.credera-section.custom-product-template-section .product_header_nav .money {
+  color: #333333;
+}
+
+/* line 621, sass/_sections.scss */
+.credera-section.custom-product-template-section .product_header_nav .sale-callout .compare-at-price {
+  font-weight: 700;
+  font-size: 14px;
+  color: #707070;
+  margin: 0;
+  margin-right: 3px;
+  text-decoration: line-through;
+}
+
+/* line 629, sass/_sections.scss */
+.credera-section.custom-product-template-section .product_header_nav .sale-callout .compare-at-price .money {
+  color: #707070;
+}
+
+/* line 634, sass/_sections.scss */
+.credera-section.custom-product-template-section .product_header_nav .sale-callout .money {
+  color: #d22d35;
+}
+
+@media (max-width: 568px) {
+  /* line 609, sass/_sections.scss */
+  .credera-section.custom-product-template-section {
+    padding: 20px;
+  }
+  /* line 642, sass/_sections.scss */
+  .credera-section.custom-product-template-section .product_header_nav .sale-callout .compare-at-price {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1850px) {
+  /* line 648, sass/_sections.scss */
+  .credera-section.custom-product-template-section .product_header_nav .pro_head_middle {
+    width: unset;
+  }
+}
+
+/* line 2, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* line 11, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner video {
+  z-index: 0;
+  width: 100%;
+}
+
+@media (max-width: 568px) {
+  /* line 11, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner video {
+    max-height: 29vh;
+  }
+}
+
+/* line 20, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container {
+  z-index: 1;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* line 31, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control .video-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 40px;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15) !important;
+  transition: opacity 300ms ease;
+}
+
+/* line 45, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control .video-btn svg {
+  height: 32px;
+  width: 32px;
+}
+
+/* line 50, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control .video-btn span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #2e2e2e;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 16px;
+  transition: color 300ms;
+}
+
+/* line 62, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control .video-btn:hover {
+  opacity: 0.85;
+}
+
+/* line 68, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.on .unmute {
+  display: none;
+}
+
+/* line 71, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.on .mute {
+  display: flex;
+}
+
+/* line 74, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.on .play {
+  display: none;
+}
+
+/* line 77, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.on .pause {
+  display: flex;
+}
+
+/* line 82, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.off .unmute {
+  display: flex;
+}
+
+/* line 85, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.off .mute {
+  display: none;
+}
+
+/* line 88, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.off .play {
+  display: flex;
+}
+
+/* line 91, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control.off .pause {
+  display: none;
+}
+
+/* line 96, sass/sections/_full-width-video-banner.scss */
+.credera-section .video-banner .controls-container .video-control:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  /* line 103, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner .controls-container .video-control.sound-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 20, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner .controls-container {
+    bottom: 10px;
+    left: 10px;
+  }
+  /* line 114, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner .controls-container .video-control .video-btn {
+    border-radius: 20px;
+    padding: 12px;
+    margin: 5px;
+  }
+  /* line 119, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner .controls-container .video-control .video-btn svg {
+    height: 16px;
+    width: 16px;
+  }
+  /* line 124, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner .controls-container .video-control .video-btn span {
+    font-size: 10px;
+    line-height: 12px;
+    color: #2e2e2e;
+    margin-left: 5px;
+  }
+  /* line 132, sass/sections/_full-width-video-banner.scss */
+  .credera-section .video-banner .controls-container .video-control.sound-icon {
+    display: none;
+  }
+}
+
+/* line 2, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership {
+  background-color: #f8f8fa;
+}
+
+/* line 5, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .image-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-height: 440px;
+}
+
+/* line 12, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .image-row .image-container img {
+  max-width: 100%;
+}
+
+/* line 17, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .image-row .primary-image {
+  align-self: center;
+  margin: 0 16px;
+  max-width: 50%;
+}
+
+/* line 23, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .image-row .secondary-image {
+  max-width: 25%;
+}
+
+/* line 26, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .image-row .secondary-image.left {
+  align-self: flex-start;
+  transform: translateX(-40px);
+}
+
+/* line 30, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .image-row .secondary-image.right {
+  align-self: flex-end;
+  transform: translateX(40px);
+}
+
+/* line 37, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .overview-container {
+  padding: 120px 0 80px;
+  max-width: 960px;
+  margin: auto;
+}
+
+/* line 42, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .overview-container .label-text,
+.credera-section .category-echelon-membership .overview-container .section-title,
+.credera-section .category-echelon-membership .overview-container .copy-text {
+  text-align: center;
+}
+
+/* line 48, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .overview-container .copy-text {
+  margin: 0;
+}
+
+/* line 54, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .icon-container .icon-row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto;
+}
+
+/* line 60, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .icon-container .feature-item {
+  width: 25%;
+  padding: 24px;
+  text-align: center;
+}
+
+/* line 65, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .icon-container .feature-item svg {
+  margin-bottom: 24px;
+}
+
+/* line 68, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .icon-container .feature-item .label-text {
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2e2e2e;
+}
+
+/* line 76, sass/sections/_category-echelon-membership.scss */
+.credera-section .category-echelon-membership .icon-container .feature-item .copy-text {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 1080px) {
+  /* line 87, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .icon-container .icon-row {
+    flex-wrap: wrap;
+  }
+  /* line 90, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .icon-container .feature-item {
+    width: 50%;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 98, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .image-row {
+    flex-wrap: wrap;
+    max-height: none;
+  }
+  /* line 102, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .image-row .image-container img {
+    width: 100%;
+  }
+  /* line 106, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .image-row .primary-image {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+  /* line 112, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .image-row .secondary-image {
+    width: 50%;
+    max-width: 50%;
+    padding: 0 16px;
+  }
+  /* line 117, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .image-row .secondary-image.left {
+    order: 2;
+    padding-right: 8px;
+    transform: none;
+  }
+  /* line 122, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .image-row .secondary-image.right {
+    order: 3;
+    padding-left: 8px;
+    transform: none;
+  }
+  /* line 130, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .overview-container {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 137, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .icon-container .icon-row {
+    flex-wrap: wrap;
+  }
+  /* line 140, sass/sections/_category-echelon-membership.scss */
+  .credera-section .category-echelon-membership .icon-container .feature-item {
+    width: 100%;
+    padding: 24px 0;
+  }
+}
+
+/* line 3, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* line 7, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .row:after {
+  display: none;
+}
+
+/* line 11, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .item-row {
+  margin: 0 -32px;
+}
+
+/* line 15, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .overview-container {
+  width: 50%;
+  padding-right: 120px;
+}
+
+/* line 20, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .icon-container {
+  width: 50%;
+}
+
+/* line 23, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .feature-item {
+  width: 50%;
+  padding: 32px;
+}
+
+/* line 27, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .feature-item svg {
+  margin-bottom: 24px;
+}
+
+/* line 30, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .feature-item .label-text {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+/* line 34, sass/sections/_icon-info-section.scss */
+.credera-section .icon-info-section .feature-item .copy-text {
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  /* line 40, sass/sections/_icon-info-section.scss */
+  .credera-section .icon-info-section .overview-container,
+  .credera-section .icon-info-section .icon-container {
+    width: 100%;
+    padding: 0;
+  }
+  /* line 45, sass/sections/_icon-info-section.scss */
+  .credera-section .icon-info-section .overview-container .item-row,
+  .credera-section .icon-info-section .icon-container .item-row {
+    margin: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 53, sass/sections/_icon-info-section.scss */
+  .credera-section .icon-info-section .overview-container .section-title,
+  .credera-section .icon-info-section .overview-container .copy-text {
+    text-align: center;
+  }
+  /* line 58, sass/sections/_icon-info-section.scss */
+  .credera-section .icon-info-section .feature-item {
+    width: 100%;
+    text-align: center;
+  }
+  /* line 62, sass/sections/_icon-info-section.scss */
+  .credera-section .icon-info-section .feature-item .label-text,
+  .credera-section .icon-info-section .feature-item .copy-text {
+    text-align: center;
+  }
+}
+
+/* line 2, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav {
+  position: fixed;
+  top: 118px;
+  left: 0;
+  right: 0;
+  background-color: #f8f8fa;
+  border-bottom: 1px solid #eaeaea;
+  padding: 24px 40px;
+  z-index: 10;
+}
+
+/* line 13, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .row {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* line 19, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .title-container {
+  width: 25%;
+  text-align: left;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+/* line 24, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .title-container h1.title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #002a3a;
+  margin: 0;
+}
+
+/* line 35, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .nav-item-container {
+  width: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+/* line 41, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .nav-item-container .nav-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0;
+}
+
+/* line 48, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .nav-item-container .nav-list .nav-item {
+  margin: 0 12px;
+}
+
+/* line 50, sass/sections/_category-sub-navigation.scss */
+.credera-section .category-header-nav .nav-item-container .nav-list .nav-item a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #707070;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  /* line 2, sass/sections/_category-sub-navigation.scss */
+  .credera-section .category-header-nav {
+    top: 112px;
+  }
+  /* line 66, sass/sections/_category-sub-navigation.scss */
+  .credera-section .category-header-nav .title-container {
+    width: 100%;
+  }
+  /* line 69, sass/sections/_category-sub-navigation.scss */
+  .credera-section .category-header-nav .nav-item-container {
+    display: none;
+  }
+}
+
+/* line 1, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features {
+  background-color: #002a3a;
+}
+
+/* line 4, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .features-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* line 9, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .section-title,
+.credera-section .category-product-features .copy-text,
+.credera-section .category-product-features .label-text,
+.credera-section .category-product-features h4,
+.credera-section .category-product-features p {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+}
+
+/* line 19, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .title-container .label-text,
+.credera-section .category-product-features .title-container .section-title {
+  text-align: center;
+}
+
+/* line 25, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container {
+  margin: 120px 0;
+}
+
+/* line 28, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta {
+  margin: 64px 0;
+}
+
+/* line 31, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* line 38, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse {
+  flex-flow: row-reverse nowrap;
+}
+
+/* line 41, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse .img-container {
+  justify-content: flex-end;
+  padding-right: 0;
+  padding-left: 60px;
+}
+
+/* line 47, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse .info-container {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+/* line 53, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .img-container {
+  width: 50%;
+  padding-right: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* line 61, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .img-container img {
+  max-width: 100%;
+}
+
+/* line 64, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .img-container video {
+  top: -500px;
+  bottom: -500px;
+  left: -500px;
+  right: -500px;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 360px;
+}
+
+/* line 75, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .info-container {
+  width: 50%;
+  padding-right: 0;
+  padding-left: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* line 84, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .info-container .primary-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 24px;
+}
+
+/* line 91, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-feature-container .feature-cta .info-container .copy-text {
+  margin: 0;
+}
+
+/* line 97, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .primary-title-container {
+  margin-bottom: 120px;
+}
+
+/* line 100, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .secondary-title-container {
+  margin-bottom: 40px;
+}
+
+/* line 104, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .secondary-feature-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -32px;
+}
+
+/* line 109, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .secondary-feature-container .secondary-feature {
+  width: 33.33%;
+  padding: 0 32px;
+  margin: 32px 0;
+}
+
+/* line 114, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .secondary-feature-container .secondary-feature .secondary-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+/* line 122, sass/sections/_category-product-features.scss */
+.credera-section .category-product-features .secondary-feature-container .secondary-feature .secondary-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  /* line 132, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-title-container {
+    margin-bottom: 80px;
+  }
+  /* line 138, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse .img-container {
+    padding-left: 30px;
+  }
+  /* line 141, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse .info-container {
+    padding-right: 60px;
+  }
+  /* line 146, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .img-container {
+    padding-right: 30px;
+  }
+  /* line 148, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .img-container video {
+    min-height: 300px;
+  }
+  /* line 153, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .info-container {
+    padding-left: 60px;
+  }
+  /* line 156, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .info-container .primary-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  /* line 164, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .secondary-feature-container {
+    margin: 0 -8px;
+  }
+  /* line 166, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .secondary-feature-container .secondary-feature {
+    width: 50%;
+    padding: 0 8px;
+    margin: 16px 0;
+  }
+  /* line 172, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .secondary-feature-container .secondary-title {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 179, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-title-container {
+    margin-bottom: 64px;
+  }
+  /* line 182, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container {
+    margin: 60px 0;
+  }
+  /* line 185, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .row,
+  .credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse {
+    flex-flow: row wrap;
+  }
+  /* line 190, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .img-container,
+  .credera-section .category-product-features .primary-feature-container .feature-cta .info-container {
+    width: 100%;
+  }
+  /* line 194, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .row-reverse .img-container,
+  .credera-section .category-product-features .primary-feature-container .feature-cta .img-container {
+    margin-bottom: 16px;
+    padding: 0;
+  }
+  /* line 199, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .primary-feature-container .feature-cta .info-container {
+    padding: 0;
+  }
+  /* line 205, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .secondary-feature-container {
+    margin: 0;
+  }
+  /* line 207, sass/sections/_category-product-features.scss */
+  .credera-section .category-product-features .secondary-feature-container .secondary-feature {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* line 1, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view {
+  overflow: hidden;
+  margin: auto;
+}
+
+/* line 5, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view * {
+  box-sizing: border-box;
+}
+
+/* line 10, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item {
+  margin: auto;
+  padding: 80px;
+}
+
+/* line 14, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item.no-background {
+  max-width: 1280px;
+}
+
+/* line 18, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 0;
+}
+
+/* line 25, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .image-container {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 33, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: -500px;
+}
+
+/* line 39, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .image-container.no-background {
+  height: auto;
+}
+
+/* line 41, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .image-container.no-background img {
+  width: 100%;
+  margin: 0;
+}
+
+/* line 48, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .info-container {
+  width: 50%;
+  padding-left: 60px;
+}
+
+/* line 52, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .info-container .label-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+/* line 58, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .info-container .label-row .label-text {
+  margin: 0;
+}
+
+/* line 61, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .info-container .label-row .new-callout {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #d22d35;
+  padding: 5px 16px;
+  border: 1px solid #d22d35;
+  border-radius: 5px;
+  margin-left: 16px;
+}
+
+/* line 74, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .carousel-product-item .info-container .product-price {
+  margin-bottom: 40px;
+}
+
+/* line 80, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .blue-background {
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  z-index: -1;
+  background-color: #bfe5f1;
+  opacity: 0.4;
+  transition: width 0.5s;
+}
+
+/* line 94, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .stacked-products .carousel-product-item {
+  position: relative;
+  padding: 60px 80px;
+}
+
+/* line 98, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .stacked-products .carousel-product-item .info-container {
+  max-width: 540px;
+}
+
+/* line 102, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .stacked-products .carousel-product-item .row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* line 104, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .stacked-products .carousel-product-item .row.reverse .info-container {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+/* line 109, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .stacked-products .carousel-product-item .row.reverse .image-container .blue-background {
+  left: unset;
+  right: 0;
+}
+
+/* line 119, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel {
+  transform-style: preserve-3d;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8fa;
+}
+
+/* line 130, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-btn {
+  z-index: 10;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  color: #2e2e2e;
+  font-size: 20px;
+}
+
+/* line 141, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-btn:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15) !important;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+/* line 148, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-max-wrapper {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 -56px;
+  position: relative;
+}
+
+/* line 156, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .blue-background.shrink {
+  width: 0 !important;
+}
+
+/* line 161, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  position: relative;
+}
+
+/* line 169, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-content .carousel-product-item {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: opacity 0.75s, z-index 0.75s;
+  width: 100%;
+}
+
+/* line 179, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-content .carousel-product-item.visible {
+  opacity: 1;
+}
+
+/* line 183, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .product-carousel .carousel-content .carousel-product-item.active {
+  position: unset;
+  z-index: 3;
+}
+
+/* line 192, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  list-style: none;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* line 207, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 211, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list .carousel-thumbnail-item {
+  max-width: 125px;
+  margin: 0 40px;
+  color: #2e2e2e;
+  border-top: 4px solid transparent;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+/* line 222, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list .carousel-thumbnail-item:hover {
+  cursor: pointer;
+}
+
+/* line 226, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list .carousel-thumbnail-item img {
+  opacity: 0.5;
+  transition: opacity 0.75s;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+/* line 233, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list .carousel-thumbnail-item p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 242, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list .carousel-thumbnail-item.active {
+  color: #d22d35;
+  border-top-color: #d22d35;
+}
+
+/* line 246, sass/sections/_category-products-view.scss */
+.credera-section .category-products-view .thumbnail-list .carousel-thumbnail-item.active img {
+  opacity: 1;
+}
+
+@media (max-width: 850px) {
+  /* line 254, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item {
+    padding: 24px !important;
+    padding-bottom: 64px !important;
+  }
+  /* line 258, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .row {
+    flex-wrap: wrap;
+  }
+  /* line 261, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .image-container {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  /* line 266, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .image-container .blue-background {
+    top: 16.5%;
+    height: 66%;
+    width: calc(100% + 80px);
+    margin-left: -80px;
+  }
+  /* line 273, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .info-container {
+    width: 100%;
+    max-width: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* line 279, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .info-container .label-row {
+    margin-bottom: 24px;
+  }
+  /* line 282, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .info-container .label-row .new-callout {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 3px 8px;
+  }
+  /* line 293, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .stacked-products .carousel-product-item .row {
+    flex-wrap: wrap;
+  }
+  /* line 296, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .stacked-products .carousel-product-item .row.reverse {
+    flex-direction: row;
+  }
+  /* line 303, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .product-carousel .carousel-btn {
+    display: none;
+  }
+  /* line 306, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .product-carousel .carousel-max-wrapper {
+    margin: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 313, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item {
+    padding: 16px !important;
+    padding-bottom: 48px !important;
+  }
+  /* line 317, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .image-container {
+    height: 375px;
+  }
+  /* line 320, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .image-container.no-background {
+    height: auto;
+  }
+  /* line 324, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .image-container .blue-background {
+    top: 20%;
+    height: 60%;
+    width: calc(90% + 24px);
+    margin-left: -24px;
+  }
+  /* line 334, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .carousel-product-item .row.reverse .image-container .blue-background {
+    width: calc(90% + 24px);
+    margin-right: -24px;
+  }
+  /* line 341, sass/sections/_category-products-view.scss */
+  .credera-section .category-products-view .thumbnail-list {
+    justify-content: flex-start;
+    margin-left: -16px;
+    padding-left: 24px;
+  }
+}
+
+/* line 1, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section {
+  padding-bottom: 0;
+}
+
+/* line 4, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-items {
+  margin-top: 240px;
+}
+
+@media (max-width: 568px) {
+  /* line 4, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-items {
+    margin-top: 0;
+  }
+}
+
+/* line 12, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item {
+  display: flex;
+}
+
+@media (max-width: 568px) {
+  /* line 12, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item {
+    flex-direction: column;
+    padding-top: 48px;
+  }
+  /* line 19, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item:nth-child(2n) {
+    background-color: #f8f8fa;
+    position: relative;
+  }
+  /* line 23, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item:nth-child(2n):before, .credera-section .experience-section .experience-item:nth-child(2n):after {
+    content: '';
+    width: 200vw;
+    height: 100%;
+    background-color: #f8f8fa;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  /* line 35, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item:nth-child(2n):before {
+    left: -50vw;
+  }
+  /* line 39, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item:nth-child(2n):after {
+    right: -50vw;
+  }
+}
+
+/* line 45, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content {
+  flex-basis: 50%;
+  width: 50%;
+  align-self: center;
+  position: relative;
+}
+
+@media (max-width: 568px) {
+  /* line 45, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content {
+    flex-basis: initial;
+    width: 100%;
+    order: 2;
+    margin: 24px 0 48px;
+  }
+}
+
+/* line 58, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content img {
+  height: 100%;
+}
+
+@media (max-width: 568px) {
+  /* line 58, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* line 67, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-spacer {
+  opacity: 0;
+  height: 70vh;
+}
+
+@media (max-width: 568px) {
+  /* line 67, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-spacer {
+    display: none;
+  }
+}
+
+/* line 76, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 70vh;
+}
+
+/* line 83, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container .mobile-only {
+  display: none;
+}
+
+/* line 86, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container .mobile-only img, .credera-section .experience-section .experience-item .experience-visual-content .image-container .mobile-only img:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 568px) {
+  /* line 76, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-container {
+    height: auto;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+  }
+  /* line 97, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-container .desktop-only {
+    display: none;
+  }
+  /* line 101, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-container .mobile-only {
+    display: block;
+  }
+}
+
+/* line 106, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container.active {
+  opacity: 1;
+  position: fixed;
+  right: 50vw;
+}
+
+@media (max-width: 568px) {
+  /* line 106, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-container.active {
+    position: relative;
+    right: unset;
+  }
+}
+
+/* line 117, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container.complete {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 568px) {
+  /* line 117, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-container.complete {
+    position: relative;
+    right: unset;
+  }
+}
+
+/* line 126, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container.complete.active {
+  opacity: 0;
+}
+
+@media (max-width: 568px) {
+  /* line 126, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-visual-content .image-container.complete.active {
+    opacity: 1;
+  }
+}
+
+/* line 134, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container.complete.active.last {
+  opacity: 1;
+}
+
+/* line 139, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-visual-content .image-container.first {
+  opacity: 1;
+}
+
+/* line 144, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-text-content {
+  padding-left: 64px;
+  flex-basis: 50%;
+  align-self: center;
+}
+
+/* line 149, sass/sections/_category-experience-section.scss */
+.credera-section .experience-section .experience-item .experience-text-content .text-container {
+  max-width: 480px;
+  margin: auto;
+}
+
+@media (max-width: 568px) {
+  /* line 144, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-text-content {
+    padding-left: 0;
+    flex-basis: initial;
+    width: 100%;
+    order: 1;
+  }
+  /* line 160, sass/sections/_category-experience-section.scss */
+  .credera-section .experience-section .experience-item .experience-text-content .text-container {
+    max-width: none;
+  }
+}
+
+/* line 2, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare {
+  background-color: #f8f8fa;
+  padding: 80px;
+}
+
+/* line 6, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .header-row {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* line 13, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .header-row .section-title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+/* line 19, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .header-row .header-link {
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* line 25, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .header-row .header-link span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #d22d35;
+}
+
+/* line 33, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .header-row .header-link svg {
+  height: 20px;
+  width: 20px;
+  color: #d22d35;
+  margin-left: 16px;
+}
+
+/* line 39, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .header-row .header-link svg path {
+  fill: #d22d35;
+}
+
+/* line 46, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* line 53, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card-column {
+  padding: 0 12px;
+  max-width: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* line 59, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card-column.col-1 {
+  width: 100%;
+}
+
+/* line 62, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card-column.col-2 {
+  width: 50%;
+}
+
+/* line 65, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card-column.col-3 {
+  width: 33.33%;
+}
+
+/* line 68, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card-column.col-4 {
+  width: 25%;
+}
+
+/* line 73, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card-dropdown {
+  flex-grow: 0;
+  border-width: 2px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: #8e8e8e;
+}
+
+/* line 82, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card {
+  flex-grow: 1;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* line 90, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .image-container {
+  width: 100%;
+  height: 300px;
+  background-color: #eff9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+}
+
+/* line 99, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .image-container img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* line 105, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .content-container {
+  background-color: #ffffff;
+  border-top: 1px solid #d9d9d9;
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* line 114, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .content-container .card-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2e2e2e;
+  margin: 0;
+}
+
+/* line 122, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .content-container .card-subtitle {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2e2e2e;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+/* line 131, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .content-container .card-content {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #707070;
+  margin-bottom: 40px;
+}
+
+/* line 140, sass/sections/_category-product-compare.scss */
+.credera-section .category-product-compare .card-container .card .content-container .primary-button .button-content {
+  justify-content: center;
+}
+
+@media (max-width: 1080px) {
+  /* line 2, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare {
+    padding: 48px 32px;
+  }
+  /* line 153, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card-column.col-3 .image-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 163, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card .content-container {
+    padding: 16px;
+  }
+  /* line 166, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card .content-container .card-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  /* line 170, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card .content-container .card-subtitle {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+  /* line 175, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card .content-container .card-content {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 24px;
+  }
+  /* line 181, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card .content-container .primary-button svg {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 2, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare {
+    padding: 48px 8px;
+  }
+  /* line 194, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card-column {
+    padding: 0 8px;
+  }
+  /* line 197, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card-column .card-dropdown {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  /* line 203, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card-column .card .image-container {
+    height: 160px;
+  }
+  /* line 206, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card-column .card .primary-button {
+    padding: 16px 20px;
+  }
+  /* line 209, sass/sections/_category-product-compare.scss */
+  .credera-section .category-product-compare .card-container .card-column .card .primary-button .button-content span {
+    margin: auto;
+  }
+}
+
+/* line 1, sass/sections/_footer.scss */
+.credera-section .footer {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #002a3a;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* line 11, sass/sections/_footer.scss */
+.credera-section .footer .main-footer {
+  background-color: #002a3a;
+  color: #ffffff;
+}
+
+/* line 15, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+  /* line 15, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .container {
+    display: block;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 15, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* line 31, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu-section {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-right: 120px;
+  position: relative;
+}
+
+/* line 38, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu-section .footer-menu {
+  flex-basis: 33.3%;
+  width: 33.3%;
+}
+
+@media (max-width: 568px) {
+  /* line 38, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-menu-section .footer-menu {
+    flex-basis: 50%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  /* line 38, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-menu-section .footer-menu {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 31, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-menu-section {
+    margin-right: 64px;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 31, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-menu-section {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 31, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-menu-section {
+    flex-wrap: wrap;
+  }
+}
+
+/* line 66, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu-title {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+/* line 78, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu:not(:last-of-type) {
+  margin-right: 48px;
+}
+
+@media (max-width: 568px) {
+  /* line 78, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-menu:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+/* line 87, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu .footer-menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 93, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu .footer-menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 97, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu .footer-menu-item:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+
+/* line 101, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu .footer-menu-item a {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  transition: color 300ms;
+}
+
+/* line 108, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-menu .footer-menu-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1080px) {
+  /* line 115, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-secondary-links {
+    margin-top: 48px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 115, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-secondary-links {
+    display: block;
+    margin-top: 40px;
+  }
+}
+
+/* line 129, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-contact {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1080px) {
+  /* line 129, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-contact {
+    margin-right: 48px;
+    flex-basis: calc(66.6% - 16px);
+    width: calc(66.6% - 16px);
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 129, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-contact {
+    margin-bottom: 40px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+/* line 144, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-contact .contact-text {
+  max-width: 320px;
+}
+
+@media (max-width: 1080px) {
+  /* line 144, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-contact .contact-text {
+    max-width: none;
+  }
+}
+
+/* line 151, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-contact .contact-text a {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+/* line 161, sass/sections/_footer.scss */
+.credera-section .footer .main-footer .footer-social {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1080px) {
+  /* line 161, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-social {
+    margin-right: 48px;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 161, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-social {
+    margin-bottom: 40px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 177, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-app .app-store-links li {
+    display: block;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* line 175, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-app {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  /* line 186, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-app .app-store-links li {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 175, sass/sections/_footer.scss */
+  .credera-section .footer .main-footer .footer-app {
+    width: 100%;
+  }
+}
+
+/* line 197, sass/sections/_footer.scss */
+.credera-section .footer .subfooter {
+  background-color: #00202d;
+}
+
+/* line 200, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (max-width: 568px) {
+  /* line 200, sass/sections/_footer.scss */
+  .credera-section .footer .subfooter .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* line 210, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-top {
+  border-bottom: 1px solid #707070;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+  /* line 210, sass/sections/_footer.scss */
+  .credera-section .footer .subfooter .subfooter-top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 568px) {
+  /* line 210, sass/sections/_footer.scss */
+  .credera-section .footer .subfooter .subfooter-top {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+/* line 226, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-top ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 231, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-top ul li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+/* line 236, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-top ul li:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+@media (max-width: 568px) {
+  /* line 231, sass/sections/_footer.scss */
+  .credera-section .footer .subfooter .subfooter-top ul li {
+    display: block;
+  }
+  /* line 243, sass/sections/_footer.scss */
+  .credera-section .footer .subfooter .subfooter-top ul li:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
+/* line 249, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-top ul li a {
+  font-family: "Rubik", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  transition: color 300ms;
+}
+
+/* line 256, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-top ul li a:hover {
+  text-decoration: underline;
+}
+
+/* line 265, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-bottom p {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 272, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-bottom .subfooter-text p:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+
+/* line 276, sass/sections/_footer.scss */
+.credera-section .footer .subfooter .subfooter-bottom .copyright {
+  margin-top: 24px;
+}
+
+/* line 684, sass/_sections.scss */
+.collection-template-choose-the-plan {
+  font-family: "Rubik", sans-serif;
+  background: #f8f8fa;
+}
+
+/* line 690, sass/_sections.scss */
+.breadcrumbContainer {
+  font-family: "Rubik", sans-serif;
+  position: fixed;
+  padding: 45px;
+  font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+  background: #f8f8fa;
+  border-bottom: solid #eaeaea 2px;
+  z-index: 1;
+}
+
+/* line 701, sass/_sections.scss */
+.breadcrumbContainer .breadcrumbLeft {
+  text-align: right;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+/* line 708, sass/_sections.scss */
+.breadcrumbContainer .breadcrumbRight {
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+/* line 717, sass/_sections.scss */
+.breadcrumbSpacer {
+  height: 90px;
+}
+
+/* line 723, sass/_sections.scss */
+.compareTextContainer {
+  text-align: center;
+  margin: 30px;
+}
+
+/* line 726, sass/_sections.scss */
+.compareTextContainer h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 4em;
+}
+
+/* line 731, sass/_sections.scss */
+.compareTextContainer p {
+  font-size: 1.5em;
+}
+
+/* line 734, sass/_sections.scss */
+.compareTextContainer .compareLoginLink {
+  color: #d22d35;
+}
+
+/* line 740, sass/_sections.scss */
+.compareMainBox {
+  border: #eaeaea solid 1px;
+}
+
+/* line 743, sass/_sections.scss */
+.compareTopBox {
+  background: #bfe5f1;
+  padding: 30px;
+  border-bottom: solid #eaeaea 2px;
+  position: relative;
+}
+
+/* line 748, sass/_sections.scss */
+.compareTopBox h1 {
+  text-align: left;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+
+/* line 758, sass/_sections.scss */
+.comparePricePerMonth {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  line-height: 1em;
+}
+
+/* line 765, sass/_sections.scss */
+.compareMonthly {
+  font-size: 0.5em;
+  font-weight: normal;
+}
+
+/* line 769, sass/_sections.scss */
+.compareBilled {
+  margin: 0;
+  text-align: left;
+}
+
+/* line 773, sass/_sections.scss */
+.compareBottomBox {
+  background: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/* line 777, sass/_sections.scss */
+.compareBottomBox ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+/* line 781, sass/_sections.scss */
+.compareBottomBox ul li:last-child {
+  border-bottom: none;
+}
+
+/* line 785, sass/_sections.scss */
+.compareBottomBox li {
+  border-bottom: solid #eaeaea 1px;
+  padding: 0 0 15px 0;
+  position: relative;
+}
+
+/* line 793, sass/_sections.scss */
+.compareBottomBoxRight {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+
+/* line 799, sass/_sections.scss */
+.compareShipping {
+  text-align: right;
+  margin-top: -30px;
+  font-weight: bold;
+  color: #8e8e8e;
+}
+
+/* line 805, sass/_sections.scss */
+.compareShippingDeats {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* line 809, sass/_sections.scss */
+.compareFinanceContainer {
+  margin-top: 30px;
+}
+
+/* line 814, sass/_sections.scss */
+.compareMainBox .primary-button {
+  background-color: #d22d35;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px 24px;
+  transition: background-color 300ms ease;
+}
+
+/* line 828, sass/_sections.scss */
+.compareMainBox .primary-button * {
+  color: #ffffff;
+}
+
+/* line 832, sass/_sections.scss */
+.compareMainBox .primary-button .button-content {
+  display: flex;
+}
+
+/* line 835, sass/_sections.scss */
+.compareMainBox .primary-button .button-content svg {
+  align-self: center;
+  height: 20px;
+  margin-left: 24px;
+  width: 20px;
+  transition: transform 300ms ease;
+}
+
+/* line 844, sass/_sections.scss */
+.compareMainBox .primary-button:hover {
+  background-color: #bd2930;
+}
+
+/* line 847, sass/_sections.scss */
+.compareMainBox .primary-button:hover .button-content svg {
+  transform: translateX(2px);
+}
+
+@media (max-width: 568px) {
+  /* line 814, sass/_sections.scss */
+  .compareMainBox .primary-button {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+  /* line 858, sass/_sections.scss */
+  .compareMainBox .primary-button .button-content {
+    justify-content: space-between;
+  }
+  /* line 861, sass/_sections.scss */
+  .compareMainBox .primary-button .button-content span {
+    flex: 1;
+    margin-left: 32px;
+  }
+}
+
+/* line 872, sass/_sections.scss */
+.compareMainBox .badge {
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px 16px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  right: 30px;
+  top: 38px;
+}
+
+/* line 890, sass/_sections.scss */
+.compareQuickFaq {
+  text-align: left;
+  background: white;
+  padding: 30px;
+}
+
+/* line 895, sass/_sections.scss */
+.compareQuickFaq h1 {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* line 900, sass/_sections.scss */
+.compareQuickFaq h2 {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* line 5, sass/_style-overrides.scss */
+.darkModeToggle[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+/* line 11, sass/_style-overrides.scss */
+.darkModeToggleLabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+/* line 22, sass/_style-overrides.scss */
+.darkModeToggleLabel:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+/* line 34, sass/_style-overrides.scss */
+.darkModeToggle:checked + label {
+  background: var(--color-headings);
+}
+
+/* line 38, sass/_style-overrides.scss */
+.darkModeToggle:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+/* line 43, sass/_style-overrides.scss */
+.darkModeToggleLabel:active:after {
+  width: 45px;
+}
+
+/* line 47, sass/_style-overrides.scss */
+.toggle-container {
+  margin: auto;
+}
+
+/* line 51, sass/_style-overrides.scss */
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/* line 59, sass/_style-overrides.scss */
+html {
+  overflow-x: hidden;
+  --bg: #ffffff;
+  --bg-panel: #ffffff;
+  --color-headings: #fafafa;
+  --color-text: #333333;
+}
+
+/* line 68, sass/_style-overrides.scss */
+html[data-theme='dark'] {
+  --bg: #333333;
+  --bg-panel: #434343;
+  --color-headings: #ffffff;
+  --color-text: #B5B5B5;
+}
+
+/* line 76, sass/_style-overrides.scss */
+body {
+  background-color: var(--bg);
+}
+
+/* line 80, sass/_style-overrides.scss */
+h1 {
+  color: var(--color-headings) !important;
+}
+
+/* line 85, sass/_style-overrides.scss */
+h3 {
+  color: var(--color-headings !important);
+}
+
+/* line 89, sass/_style-overrides.scss */
+p {
+  color: var(--color-text);
+}
+
+/* line 93, sass/_style-overrides.scss */
+.credera-section .desktop-nav .nav-bar {
+  background-color: var(--bg);
+}
+
+/* line 97, sass/_style-overrides.scss */
+.credera-section .video-hero .info-container .info-content .hero-title {
+  color: var(--color-headings);
+}
+
+/* line 102, sass/_style-overrides.scss */
+.credera-snippet {
+  color: var(--color-headings);
+}
+
+/* line 109, sass/_style-overrides.scss */
+.credera-style-override.trustspot-main-widget {
+  padding: 120px 0;
+}
+
+/* line 112, sass/_style-overrides.scss */
+.credera-style-override.trustspot-main-widget #trustspot-widget-wrapper {
+  font-family: "Rubik", sans-serif !important;
+}
+
+/* line 121, sass/_style-overrides.scss */
+.credera-style-override.credera-choose-plan.credera-h1 {
+  text-align: center;
+  font-family: "Rubik", sans-serif !important;
+  font-size: 42px !important;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  color: #2e2e2e;
+}
+
+/* line 137, sass/_style-overrides.scss */
+.page-category-connect-bike .container.main.content,
+.page-category-rowers .container.main.content,
+.page-category-reflects .container.main.content {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 568px) {
+  /* line 134, sass/_style-overrides.scss */
+  .page-category-connect-bike,
+  .page-category-rowers,
+  .page-category-reflects {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* line 149, sass/_style-overrides.scss */
+#page-content.frozen {
+  overflow: hidden;
+  height: calc(100vh - 150px);
+}
+
+@media (max-width: 850px) {
+  /* line 159, sass/_style-overrides.scss */
+  .mobile_nav-fixed--true #pagecontent,
+  .mobile_nav-fixed--false #pagecontent {
+    padding-bottom: 0px !important;
+  }
+}

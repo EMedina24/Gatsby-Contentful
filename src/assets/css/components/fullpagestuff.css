@@ -1,0 +1,6 @@
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent black transparent transparent !important;
+}
